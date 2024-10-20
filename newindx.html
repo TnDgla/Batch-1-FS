@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clone Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7fafc;
+        margin: 0;
+      }
+
+      nav {
+        background-color: white;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      nav .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav .nav-links {
+        display: flex;
+        gap: 1rem;
+      }
+
+      nav .nav-links a {
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        color: #333;
+      }
+
+      nav .nav-links a:hover {
+        background-color: #e2e8f0;
+      }
+
+      nav .menu-button {
+        display: none;
+        font-size: 1.5rem;
+      }
+
+      .hero {
+        background-image: url("https://www.w3schools.com/howto/img_parallax.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+      }
+
+      .section {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+
+      .about {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+      .about img {
+        width: 200px; 
+       
+      }
+
+      .about-text {
+        margin-left: 20px; 
+      }
+
+      .skills {
+        margin-top: 1rem;
+        text-align: left;
+        margin: auto;
+        max-width: 400px;
+      }
+
+      .skills div {
+        margin: 1rem 0;
+      }
+
+      .progress-bar {
+        background-color: #e2e8f0;
+        border-radius: 0.25rem;
+        height: 10px;
+        width: 100%;
+        position: relative;
+      }
+
+      .progress {
+        background-color: black;
+        height: 100%;
+      }
+
+      .statistics {
+        background-color: #2d3748;
+        color: white;
+        padding: 2rem 0;
+      }
+
+      .portfolio {
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 1rem;
+      }
+
+      .portfolio img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      .portfolio img:hover {
+        opacity: 0.75;
+      }
+
+      .footer {
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: center; 
+        margin-bottom: 2rem;
+      }
+
+      .footer-image {
+        width: 100px; 
+        height: auto; 
+        margin-right: 20px; 
+      }
+
+      .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .contact-info div {
+        text-align: center;
+      }
+
+      .contact-form-container {
+        display: flex;
+        align-items: flex-start; 
+        max-width: 600px;
+        margin: 2rem auto;
+      }
+
+      .contact-form {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px; 
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border: 1px solid #ccc;
+        border-radius: 0.25rem;
+      }
+
+      .contact-form button {
+        padding: 0.5rem;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+      }
+
+      .contact-form button:hover {
+        background-color: #333;
+      }
+
+      @media (max-width: 768px) {
+        nav .nav-links {
+          display: none;
+        }
+
+        nav .menu-button {
+          display: block;
+        }
+
+        .about {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .about img {
+          margin-bottom: 20px;
+        }
+
+        .portfolio {
+          grid-template-columns: repeat(2, 1fr); 
+        }
+
+        .contact-form-container {
+          flex-direction: column; 
+          align-items: center; 
+
+        .contact-form {
+          margin-left: 0; 
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-links">
+          <a href="#home">HOME</a>
+          <a href="#about">ABOUT</a>
+          <a href="#portfolio">PORTFOLIO</a>
+          <a href="#contact">CONTACT</a>
+          <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+        <button class="menu-button" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <span>MY <span>WEBSITE</span> LOGO</span>
+    </div>
+
+    <div class="section" id="about">
+      <h3 style="text-align: center">ABOUT ME</h3>
+      <p style="text-align: center">I love photography</p>
+      <p>
+        We have created a fictional "personal" website/blog, and our fictional
+        character is a hobby photographer. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+
+      <div class="about">
+        <img
+          src="https://www.w3schools.com/w3images/avatar_hat.jpg"
+          alt="Photo of Me"
+        />
+        <div class="about-text">
+          <p>
+            <strong><i class="fa fa-user"></i> My Name</strong>
+          </p>
+          <p>
+            Welcome to my website. I am lorem ipsum consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum consectetur
+            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </p>
+        </div>
+      </div>
+
+      <div class="skills">
+        <p class="text-xl">I'm really good at:</p>
+        <div>
+          <span><i class="fa fa-camera"></i> Photography</span>
+          <span>90%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div>
+          <span><i class="fa fa-paint-brush"></i> Web Design</span>
+          <span>85%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%"></div>
+          </div>
+        </div>
+        <div>
+          <span><i class="fa fa-code"></i> Photo Shop</span>
+          <span>75%</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section statistics">
+      <div class="container">
+        <div>
+          <h2>14+</h2>
+          <p>Projects Completed</p>
+        </div>
+        <div>
+          <h2>55+</h2>
+          <p>Projects Done</p>
+        </div>
+        <div>
+          <h2>89+</h2>
+          <p>Happy Clients</p>
+        </div>
+        <div>
+            <h2>150+</h2>
+            <p>Meetings</p>
+          </div>
+      </div>
+    </div>
+
+    <div class="section" id="portfolio">
+      <h3 style="text-align: center">PORTFOLIO</h3>
+      <div class="portfolio">
+        <img src="https://www.w3schools.com/w3images/p1.jpg" alt="Portfolio Image 1" />
+        <img src="https://www.w3schools.com/w3images/p2.jpg" alt="Portfolio Image 2" />
+        <img src="https://www.w3schools.com/w3images/p3.jpg" alt="Portfolio Image 3" />
+        <img src="https://www.w3schools.com/w3images/p4.jpg" alt="Portfolio Image 4" />
+        <img src="https://www.w3schools.com/w3images/p7.jpg" alt="Portfolio Image 5" />
+        <img src="https://www.w3schools.com/w3images/p6.jpg" alt="Portfolio Image 6" />
+        <img src="https://www.w3schools.com/w3images/p5.jpg" alt="Portfolio Image 7" />
+        <img src="https://www.w3schools.com/w3images/p8.jpg" alt="Portfolio Image 8" />
+      </div>
+    </div>
+
+    <div class="section" id="contact">
+      <h3 style="text-align: center">WHERE I WORK</h3>
+      <p>I'd love your feedback!</p>
+      <div class="contact-form-container">
+        <img
+          src="https://www.w3schools.com/w3images/avatar_hat.jpg"
+          alt="Contact Me"
+          style="width: 200px"
+        />
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">SEND MESSAGE</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-content">
+      </div>
+      <div class="contact-info">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p> Chicago, US</p>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <p> Phone: +00 151515</p>
+        </div>
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>Email: mail@mail.com</p>
+        </div>
+      </div>
+      <p>Swing by for a cup of , or leave me a note: </p>
+    </div>
+
+  </body>
+</html>
