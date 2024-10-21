@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Day1/css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container my-4 border-1">
+        <div class="row border border-1">
+            <div class="col-12 border"><strong><center>Time Table</center></strong></div>
+        </div>
+        <div class="row border">
+            <div class="col-3 border">
+                Hour
+            </div>
+            <div class="col-9 border">
+                <div class="row border">
+                    <div class="col border">Monday</div>
+                    <div class="col border">Tuesday</div>
+                    <div class="col border">Wed</div>
+                    <div class="col border">Thur</div>
+                    <div class="col border">Fri</div>
+                </div>
+                <div class="row border">
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                </div>
+                <div class="row border">
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                </div>
+                <div class="row border"><center>Lunch</center></div>
+                <div class="row border">
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                </div>
+                <div class="row border">
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                    <div class="col border"><a href="./science.html">science</a></div>
+                    <div class="col border"><a href="./math.html">Math</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Contact</title>
+    <link rel="stylesheet" href="../../Day1/css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Teacher Contact Information</h1>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th scope="row">Name</th>
+                    <td>Sachin</td>
+                </tr>
+                <tr>
+                    <th scope="row">Email</th>
+                    <td>Sachin@example.com</td>
+                </tr>
+                <tr>
+                    <th scope="row">Phone</th>
+                    <td>97593865395</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Contact</title>
+    <link rel="stylesheet" href="../../Day1/css/bootstrap.css">
+</head>
+<body>
+    <h1>Teacher Contact Information</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <td>Rahul</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>Rahul@example.com</td>
+        </tr>
+        <tr>
+            <th>Phone</th>
+            <td>6346645534</td>
+        </tr>
+    </table>
+</body>
+</html>
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: #cd5858;
+}
+.Hour{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    font-size: 30px;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
