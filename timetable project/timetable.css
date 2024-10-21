@@ -1,0 +1,60 @@
+
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+.timetable-container {
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    padding: 15px;
+}
+
+.timetable-cell {
+    background-color: #f0f8ff;
+    transition: background-color 0.3s;
+}
+
+.timetable-cell:hover {
+    background-color: #e9ecef;
+    cursor: pointer;
+}
+
+.teacher-info {
+    display: none; /* Initially hide teacher info */
+    background-color: #e9ecef;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-info h3 {
+    color: #343a40;
+}
+
+.teacher-info p {
+    margin: 5px 0;
+}
+
+.lunch-break {
+    background-color: #ffcccc;
+    font-weight: bold;
+}
