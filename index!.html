@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .head {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 24px;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th,
+        table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        table td {
+            cursor: pointer;
+            position: relative;
+        }
+
+        table tbody tr {
+            border-bottom: 2px solid #4CAF50;
+        }
+
+        table td:hover {
+            background-color: #f0f0f0;
+        }
+
+        table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .blinking {
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                background-color: orangered;
+                /* transform: scale(1.5); */
+            }
+        }
+
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .popup-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .popup-close {
+            cursor: pointer;
+            font-size: 20px;
+            color: #f44336;
+        }
+
+        .popup-content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .popup-content p {
+            margin: 8px 0;
+        }
+
+        .popup-footer {
+            text-align: right;
+        }
+
+        .popup-footer button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .popup-footer button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Time Table of Section 3C</h1>
+    </div>
+
+    <table id="timetable">
+        <thead>
+            <tr>
+                <th>Lecture #</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th>7</th>
+                <th>8</th>
+            </tr>
+            <tr>
+                <th>Day/Time</th>
+                <th>08:00-09:00</th>
+                <th>09:00-10:00</th>
+                <th>10:00-11:00</th>
+                <th>11:00-12:00</th>
+                <th>12:00-01:00</th>
+                <th>01:00-02:00</th>
+                <th>02:00-03:00</th>
+                <th>03:00-04:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Monday</th>
+                <td id="mon-1" onclick="showPopup('PCPH0002')">PCPH0002</td>
+                <td id="mon-2" onclick="showPopup('BCSC0011')">BCSC0011</td>
+                <td id="mon-3" onclick="showPopup('BCSE1251')">BCSE1251</td>
+                <td id="mon-4" onclick="showPopup('BCSE0105')">BCSE0105</td>
+                <td></td>
+                <td id="mon-5" colspan="2" onclick="showPopup('BCSE0281')">BCSE0281</td>
+                <td></td>
+            </tr>
+            <tr class="Tuesday">
+                <th>Tuesday</th>
+                <td class="tue-1" onclick="showPopup('PQRH0002')">
+                    <p>PQRH0002</p>
+                </td>
+                <td class="tue-2" onclick="showPopup('BCSE0011')">
+                    <p>BCSE0011</p>
+                </td>
+                <td class="tue-3" onclick="showPopup('BCSE0812')">
+                    <p>BCSE0812</p>
+                </td>
+                <td class="tue-4" onclick="showPopup('BCSE0812')">
+                    <p>BCSE0812</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td class="tue-5" onclick="showPopup('BCSE1251')">
+                    <p>BCSE1251</p>
+                </td>
+                <td class="tue-6" onclick="showPopup('BCSE0053')">
+                    <p>BCSE0053</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+            </tr>
+            <tr class="wednesday">
+                <th>Wednesday</th>
+                <td class="wed-1" onclick="showPopup('PCPH0002')">
+                    <p>PCPH0002</p>
+                </td>
+                <td class="wed-2" onclick="showPopup('BCSE0105')">
+                    <p>BCSE0105</p>
+                </td>
+                <td class="wed-3" onclick="showPopup('BCSE0022')">
+                    <p>BCSE0022</p>
+                </td>
+                <td class="wed-4" onclick="showPopup('BCSE0053')">
+                    <p>BCSE0053</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td class="wed-5" onclick="showPopup('BCSE0011')">
+                    <p>BCSE0011/3C3</p>
+                </td>
+                <td class="wed-6" colspan="2" onclick="showPopup('BCSE0133')">
+                    <p>BCSE0133</p>
+                </td>
+
+            </tr>
+            <tr class="Thursday">
+                <th>Thursday</th>
+                <td class="Thur-1" colspan="2" style="text-align: center;" onclick="showPopup('BCSE0812')">
+                    <p>BCSE0812</p>
+                </td>
+
+                <td class="Thur-2" onclick="showPopup('BCSE0011')">
+                    <p>BCSE0011</p>
+                </td>
+                <td class="empty">
+                    <p> </p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td class="Thur-3" onclick="showPopup('BCSE0011')">
+                    <p>BCSE0011/3C1</p>
+                </td>
+                <td class="Thur-4" onclick="showPopup('BCSE1251')">
+                    <p>BCSE1251</p>
+                </td>
+                <td class="Thur-5" onclick="showPopup('BCSE0053')">
+                    <p>BCSE0053</p>
+                </td>
+            </tr>
+            <tr class="friday">
+                <th>Friday</th>
+                <td class="Fri-1" onclick="showPopup('PQRH0011')">
+                    <p>PQRH0011</p>
+                </td>
+                <td class="Fri-2" onclick="showPopup('BCSE0105')">
+                    <p>BCSC0105</p>
+                </td>
+                <td class="Fri-3" onclick="showPopup('PVRH0001')">
+                    <p>PVRH0001</p>
+                </td>
+                <td class="Fri-4" onclick="showPopup('PGDH0001')">
+                    <p>PGDH0001</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+                <td class="Fri-5" onclick="showPopup('BCSE0011')">
+                    <p>BCSE0011/3C2</p>
+                </td>
+                <td class="Fri-6" onclick="showPopup('BCSE0022')">
+                    <p>BCSE0022</p>
+                </td>
+                <td class="empty">
+                    <p></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="popup-overlay" id="popupOverlay"></div>
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <span id="popupSubject"></span>
+        </div>
+        <div class="popup-content" id="popupDetails"></div>
+        <div class="popup-footer">
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <script>
+        const subjects = {
+            "PCPH0002": {
+                subject: "Competitive Programming",
+                facultyName: "Mr. Suresh Pratap Singh",
+                facultyContact: "9876354287"
+            },
+            "BCSE0011": {
+                subject: "Theory Of Automata & Formal Languages",
+                facultyName: "Shubham Shukla",
+                facultyContact: "987-654-3210"
+            },
+            "BCSE1251": {
+                subject: "Full Stack Using Scripting Technologies",
+                facultyName: "Shiv Kumar Verma",
+                facultyContact: "555-555-5555"
+            },
+            "BCSE0105": {
+                subject: "Machine Learning",
+                facultyName: "Jagjeet Kumar",
+                facultyContact: "456-789-1234"
+            },
+            "BCSE0133": {
+                subject: "Machine Learning",
+                facultyName: "Jagjeet Kumar",
+                facultyContact: "456-789-1234"
+            },
+            "BCSE0281": {
+                subject: "Full Stack Using Scripting Technologies Lab",
+                facultyName: "Shiv Kumar Verma",
+                facultyContact: "321-654-9870"
+            },
+            "PQRH0002": {
+                subject: "Logical Reasoning",
+                facultyName: "Ayush Gupta",
+                facultyContact: "888-888-8888"
+            },
+            "PQRH0011": {
+                subject: "Logical Reasoning",
+                facultyName: "Ayush Gupta",
+                facultyContact: "888-888-8888"
+            },
+            "BCSE0812": {
+                subject: "Analysis And Design Of Algorithm Lab",
+                facultyName: "Sohil Khan",
+                facultyContact: "222-222-2222"
+            },
+            "BCSE0053": {
+                subject: "Agile Software Development",
+                facultyName: "Madhu Sudan Kumar",
+                facultyContact: "333-333-3333"
+            },
+            "BCSE0022": {
+                subject: "Analysis And Design Of Algorithm",
+                facultyName: "Sohil Khan",
+                facultyContact: "444-444-4444"
+            },
+            "PVRH0001": {
+                subject: "Verbal Aptitude",
+                facultyName: "Quazi Ziauddin",
+                facultyContact: "999-999-9999"
+            },
+            "PGDH0001": {
+                subject: "Group Discussion & Personal Interview",
+                facultyName: "Anjali Mehra",
+                facultyContact: "111-111-1111"
+            }
+        };
+
+        const timetable = {
+            "Monday": [
+                { slot: "08:00-09:00", subject: "PCPH0002", cellId: "mon-1" },
+                { slot: "09:00-10:00", subject: "BCSE0011", cellId: "mon-2" },
+                { slot: "10:00-11:00", subject: "BCSE1251", cellId: "mon-3" },
+                { slot: "11:00-12:00", subject: "BCSE0105", cellId: "mon-4" },
+                { slot: "01:00-03:00", subject: "BCSE0281", cellId: "mon-5" },
+            ],
+            "Tuesday": [
+                { slot: "08:00-09:00", subject: "PQRH0002", cellId: "tue-1" },
+                { slot: "09:00-10:00", subject: "BCSC0011", cellId: "tue-2" },
+                { slot: "10:00-12:00", subject: "BCSE0812", cellId: "tue-3" },
+                { slot: "11:00-12:00", subject: "BCSE1251", cellId: "tue-4" },
+                { slot: "01:00-02:00", subject: "BCSE0053", cellId: "tue-5" },
+            ]
+            ,
+            "Wednesday": [
+                { slot: "08:00-09:00", subject: "PCPH0002", cellId: "wed-1" },
+                { slot: "09:00-10:00", subject: "BCSE0105", cellId: "wed-2" },
+                { slot: "10:00-11:00", subject: "BCSE0022", cellId: "wed-3" },
+                { slot: "11:00-12:00", subject: "BCSE0053", cellId: "wed-4" },
+                { slot: "01:00-02:00", subject: "BCSE0011/3C3", cellId: "wed-5" },
+                { slot: "02:00-04:00", subject: "BCSE0133", cellId: "wed-6" }
+            ]
+            ,
+            "Thursday": [
+                { slot: "08:00-10:00", subject: "PCPH0812", cellId: "Thur-1" },
+                { slot: "10:00-11:00", subject: "BCSE0011", cellId: "Thur-2" },
+                { slot: "01:00-02:00", subject: "BCSE0011/3C1", cellId: "Thur-3" },
+                { slot: "02:00-03:00", subject: "BCSE1251", cellId: "Thur-4" },
+                { slot: "03:00-04:00", subject: "BCSE0053", cellId: "Thur-5" }
+            ]
+            ,
+            "Friday": [
+                { slot: "08:00-09:00", subject: "PCPH0011", cellId: "Fri-1" },
+                { slot: "09:00-10:00", subject: "BCSE0105", cellId: "Fri-2" },
+                { slot: "10:00-11:00", subject: "PVRH0001", cellId: "Fri-3" },
+                { slot: "11:00-12:00", subject: "PGDH0001", cellId: "Fri-4" },
+                { slot: "01:00-02:00", subject: "BCSE0011/3C2", cellId: "Fri-5" },
+                { slot: "02:00-02:00", subject: "BCSE0022", cellId: "Fri-6" },
+            ]
+        };
+
+        function showPopup(subjectCode) {
+            const subjectInfo = subjects[subjectCode];
+            if (subjectInfo) {
+                document.getElementById('popupSubject').textContent = subjectInfo.subject;
+                document.getElementById('popupDetails').innerHTML = `
+                    <p><strong>Faculty Name:</strong> ${subjectInfo.facultyName}</p>
+                    <p><strong>Contact:</strong> ${subjectInfo.facultyContact}</p>
+                `;
+                document.getElementById('popupOverlay').style.display = 'block';
+                document.getElementById('popup').style.display = 'block';
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').style.display = 'none';
+            document.getElementById('popup').style.display = 'none';
+        }
+
+        function highlightOngoingClass() {
+            const now = new Date();
+            const currentDay = now.toLocaleString('en-US', { weekday: 'long' });
+            // const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+            const currentTime = `${String("08").padStart(2, '0')}:${String("23").padStart(2, '0')}`;
+
+            if (timetable[currentDay]) {
+                timetable[currentDay].forEach(classInfo => {
+                    const [start, end] = classInfo.slot.split('-');
+                    if (currentTime >= start && currentTime < end) {
+                        document.getElementById(classInfo.cellId).classList.add('blinking');
+                    }
+                });
+            }
+        }
+
+        window.onload = highlightOngoingClass;
+    </script>
+</body>
+
+</html>
