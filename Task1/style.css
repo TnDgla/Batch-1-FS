@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-image: url("https://imgs.search.brave.com/4EHeCPwaEdxA-b-rwxExpNpD32h7xKYv90gCfFsJaRY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTA5/NTI4NjIwOC9waG90/by9saWdodC1ibHVl/LXBhcGVyLWNvbG9y/LXdpdGgtdGV4dHVy/ZS1mb3ItYmFja2dy/b3VuZC5qcGc_cz02/MTJ4NjEyJnc9MCZr/PTIwJmM9cUhFeERy/VWZoSDBzQ0w0Y2FP/OFBqNmI5N1RrbjRk/c3NaZHB6SG1LblFS/Yz0");
+}
+
+h1 {
+    margin: 1rem;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2rem;
+}
+
+.table {
+    margin: 3rem 3rem 0 3rem;
+    overflow-x: auto;
+    background-color: rgb(33, 103, 107);
+    color: rgb(255, 255, 255);
+    
+    
+}
+
+table {
+    height: 100%;
+    width: 100%;
+    border: 100%;
+    
+    
+}
+
+thead th {
+    padding: 0 2rem;
+}
+
+tbody td {
+    text-align: center;
+    line-height: 20px;
+    transition: 0.5s;
+    padding: 2rem;
+}
+
+tbody td:hover {
+    background-color: rgba(47, 231, 255, 0.858);
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .table {
+        margin: 1rem;
+        font-size: 0.9rem;
+    }
+
+    thead th,
+    tbody td {
+        padding: 0.5rem;
+    }
+
+    tbody td {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .table {
+        margin: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    thead th,
+    tbody td {
+        padding: 0.3rem;
+    }
+
+    tbody td {
+        padding: 0.8rem;
+    }
+}
+
+
+/* Styling For Teacher Details Page */
+#teacher-info {
+    position: relative;
+    top: 4rem;
+    left: 4rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    max-width: 80%;
+}
+
+#teacher-info b {
+    font-size: 2rem;
+}
+
+.goBack {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-color: black;
+    border-radius: 20px;
+    background-color: rgba(47, 231, 255, 0.858);
+    color: white;
+    position: relative;
+    top: 5rem;
+    left: 4rem;
+    transition: 0.5s;
+}
+
+.goBack:hover {
+    border-width: 3px;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(33, 103, 107);
+}
