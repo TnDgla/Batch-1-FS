@@ -1,0 +1,72 @@
+.head{
+    border:2px solid purple;
+    color:plum;
+    background-color: purple;
+    text-align: center;
+    margin:40px 500px 20px 500px;
+}
+#timetable{
+    border: 0.5px solid black;
+    height: 500px;
+    width:900px;
+    margin:100px 500px 200px 500px;
+}
+#hr{
+    font-size: 40px;
+    color:black;
+    background-color: skyblue;
+}
+#day{
+    font-size: 40px;
+    color:black;
+    background-color: skyblue;
+}
+.p :hover{
+    font-size: 30px;
+    color:white;
+    background-color:plum;
+}
+#period1{
+    font-size: 30px;
+    color:black;
+    background-color: palevioletred;
+    text-align: center;
+}
+#period2{
+    font-size: 30px;
+    color:black;
+    background-color: palevioletred;
+    text-align: center;
+}
+#period3{
+    font-size: 30px;
+    color:black;
+    background-color: palevioletred;
+    text-align: center;
+}
+#period4{
+    font-size: 30px;
+    color:black;
+    background-color: palevioletred;
+    text-align: center;
+}
+#lunch{
+    font-size: 30px;
+    color:black;
+    background-color:aquamarine;
+}
+.Maths{
+    /* border:0.5px solid black; */
+    margin:0px 500px 200px 500px;
+}
+#img{
+    padding-left: 200px;
+    
+}
+.or{
+    padding-left: 200px;
+    font-size: 30px; 
+}
+#mail{
+    color: blue;
+}
