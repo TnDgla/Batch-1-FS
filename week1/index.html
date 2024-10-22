@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="container my-5" id="homeScreen">
+    <h2 class="text-center">Class Timetable</h2>
+    <table class="table table-bordered mt-4">
+        <thead class="thead-dark">
+            <tr>
+                <th>Time</th>
+                <th>Subject</th>
+                <th>Teacher</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="timetable-cell" onclick="showTeacherDetails('John Doe', 'Mathematics')">
+                <td>9:00 AM - 10:00 AM</td>
+                <td>Mathematics</td>
+                <td>John Doe</td>
+            </tr>
+            <tr class="timetable-cell" onclick="showTeacherDetails('Jane Smith', 'Science')">
+                <td>10:00 AM - 11:00 AM</td>
+                <td>Science</td>
+                <td>Jane Smith</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container my-5" id="teacherDetailsScreen" style="display:none;">
+    <h2 class="text-center" id="teacherName"></h2>
+    <div class="card mt-4">
+        <div class="card-header">
+            Teacher Information
+        </div>
+        <div class="card-body">
+            <p><strong>Subject:</strong> <span id="teacherSubject"></span></p>
+            <p><strong>Email:</strong> <span id="teacherEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="teacherPhone"></span></p>
+        </div>
+        <div class="card-footer text-right">
+            <button onclick="showHomeScreen()" class="btn btn-secondary">Back to Timetable</button>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+   
+    const teacherDetails = {
+        "John Doe": {
+            email: "johndoe@example.com",
+            phone: "123-456-7890"
+        },
+        "Jane Smith": {
+            email: "janesmith@example.com",
+            phone: "987-654-3210"
+        }
+    };
+
+    
+    function showTeacherDetails(teacher, subject) {
+        document.getElementById('homeScreen').style.display = 'none';
+        document.getElementById('teacherDetailsScreen').style.display = 'block';
+
+        document.getElementById('teacherName').innerText = teacher;
+        document.getElementById('teacherSubject').innerText = subject;
+        document.getElementById('teacherEmail').innerText = teacherDetails[teacher].email;
+        document.getElementById('teacherPhone').innerText = teacherDetails[teacher].phone;
+    }
+
+    
+    function showHomeScreen() {
+        document.getElementById('homeScreen').style.display = 'block';
+        document.getElementById('teacherDetailsScreen').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
