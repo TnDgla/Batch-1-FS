@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .timetable-container {
+            width: 80%;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+        .timetable {
+            display: grid;
+            grid-template-columns: 20% repeat(5, 1fr);
+            grid-auto-rows: minmax(50px, auto);
+            text-align: center;
+        }
+        .timetable div {
+            border: 1px solid black;
+            padding: 15px;
+        }
+        .header {
+            font-weight: bold;
+            background-color: #f0f0f0;
+        }
+        .lunch {
+            grid-column: span 6;
+            background-color: #e0e0e0;
+            font-weight: bold;
+        }
+        .timetable div:hover {
+            background-color: #d1e7dd;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div class="timetable-container">
+    <div class="timetable">
+        <div class="header" style="grid-column: span 6;">Timetable</div>
+        <div class="header">Hours</div>
+        <div class="header">Mon</div>
+        <div class="header">Tue</div>
+        <div class="header">Wed</div>
+        <div class="header">Thurs</div>
+        <div class="header">Fri</div>
+        <div class="header">Morning</div>
+        <div class="subject"><a href="teacher1.html">Science</a> (Mr. Smith)</div>
+        <div class="subject"><a href="teacher1.html">Maths</a> (Ms. Johnson)</div>
+        <div class="subject"><a href="teacher1.html">Science</a> (Mr. Smith)</div>
+        <div class="subject"><a href="teacher1.html">Maths</a> (Ms. Johnson)</div>
+        <div>Arts</div>
+        <div></div>
+        <div class="subject"><a href="teacher1.html">Social</a> (Mr. Lee)</div>
+        <div class="subject"><a href="teacher1.html">Hindi</a> (Ms. Sharma)</div>
+        <div>English</div>
+        <div>Social</div>
+        <div>Sports</div>
+        <div class="lunch">Lunch</div>
+        <div class="header">Afternoon</div>
+        <div class="subject"><a href="teacher1.html">Science</a> (Mr. Smith)</div>
+        <div class="subject"><a href="teacher1.html">Maths</a> (Ms. Johnson)</div>
+        <div class="subject"><a href="teacher1.html">Science</a> (Mr. Smith)</div>
+        <div class="subject"><a href="teacher1.html">Maths</a> (Ms. Johnson)</div>
+        <div>Project</div>
+        <div></div>
+        <div class="subject"><a href="teacher1.html">Social</a> (Mr. Lee)</div>
+        <div class="subject"><a href="teacher1.html">Hindi</a> (Ms. Sharma)</div>
+        <div>English</div>
+        <div>Social</div>
+        <div></div>
+    </div>
+</div>
+</body>
+</html>
