@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1d3e5;
+    padding: 25px;
+}
+.timetable {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color:black;
+    color: white;
+}
+
+th, td {
+    padding: 18px;
+    text-align: center;
+    border: 2px solid #ddd;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #c1c0bc;
+}
+
+tbody tr:hover {
+    background-color: #cac0ca;
+}
+
+td[colspan="6"] {
+    background-color: #d4dfe8;
+    font-weight: bold;
+}
