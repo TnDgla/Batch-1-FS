@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+}
+
+body {
+  font-family: sans-serif;
+  color: #343a40;
+  line-height: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+table {
+  width: 80%;
+}
+
+th {
+  padding: 1.5% 3%;
+}
+td {
+  padding: 1.5% 6% 1.5% 0.5%;
+}
+
+p {
+  display: inline;
+  margin-top: 5%;
+}
+
+#pro {
+  width: 17%;
+  padding-right: 3%;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+}
+
+a:active {
+  font-style: italic;
+}
+
+#hours {
+  width: 25%;
+}
