@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .subject-cell {
+            cursor: pointer;
+        }
+
+        .subject-cell:hover {
+            background-color: #f0f0f0;
+        }
+        .table {
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td class="subject-cell" data-teacher="Teacher A" data-subject="Math">Math</td>
+                    <td class="subject-cell" data-teacher="Teacher B" data-subject="Science">Science</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td class="subject-cell" data-teacher="Teacher A" data-subject="Math">Math</td>
+                    <td class="subject-cell" data-teacher="Teacher C" data-subject="English">English</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
