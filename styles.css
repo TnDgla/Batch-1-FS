@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f9fa;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+    cursor: pointer;
+}
+
+td.clickable:hover {
+    background-color: #f0f0f0;
+    transition: 0.3s ease;
+}
+
+.lunch-row {
+    background-color: #ffeeba;
+    font-weight: bold;
+}
