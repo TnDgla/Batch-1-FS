@@ -1,0 +1,14 @@
+
+body{
+   background-color: cadetblue;
+}
+.timetable { width: 100%; text-align: center; }
+.timetable th, .timetable td { padding: 20px; border: 1px solid black; }
+.timetable th { background-color: #f4f4f4; }
+.hoverable-cell:hover { background-color: #e0e0e0; cursor: pointer; }
+
+
+.hoverable-cell:hover {
+    background-color: #d1ecf1;
+    transition: background-color 0.3s ease;
+}
