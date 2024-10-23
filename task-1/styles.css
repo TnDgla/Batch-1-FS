@@ -1,0 +1,82 @@
+body {
+    background-color: #eef2f3; 
+    font-family: 'Roboto', sans-serif; 
+    margin: 0; 
+    padding: 20px; 
+}
+
+h1 {
+    color: #34495e; 
+    font-size: 2.5em; 
+    text-align: center; 
+    margin: 20px 0; 
+}
+
+.table {
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15); 
+    margin: 20px auto; 
+    width: 95%; 
+    background-color: white; 
+}
+
+.table th {
+    background-color: #3498db; 
+    color: white;
+    text-align: center;
+    padding: 20px; 
+    font-size: 1.2em; 
+}
+
+.subject-cell {
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    padding: 15px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.subject-cell:nth-child(odd) {
+    background-color: #d1f2eb; 
+}
+
+.subject-cell:nth-child(even) {
+    background-color: #f9e79f; 
+}
+
+.subject-cell:hover {
+    background-color: #e67e22; 
+    color: white;
+    transform: scale(1.03) translateZ(0); 
+}
+
+.lunch-break {
+    background-color: #f5b7b1; 
+    font-weight: bold;
+    font-size: 1.2em; 
+    text-align: center; 
+    padding: 15px; 
+}
+
+.h5, h5 {
+    font-weight: bold;
+    font-style: italic;
+    color: #2980b9; 
+}
+
+.h5 {
+    background: #c0392b; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 5px; 
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; 
+    }
+    .subject-cell, .table th {
+        padding: 12px; 
+    }
+}
