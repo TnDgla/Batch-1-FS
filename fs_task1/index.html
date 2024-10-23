@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Time Table</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;  
+            box-sizing: border-box;
+        }
+        .C-name{
+            text-align: center;
+            color: blue;
+        }
+        .main-box{
+            position: absolute;
+            border: 3px solid black;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: aliceblue;
+        }
+        .head{
+            position: absolute;
+            left: 5px;
+            top: 60px;
+            right: 10px;
+            border:2px solid black;
+            width: 1340px;
+            height: 60px;
+            background-color: rgb(0,255, 0,0.4);
+        }
+        #CTT{
+            text-align: center;
+            position: relative;
+            top: 10px
+        }
+        .sec{
+            padding-top: 10px;
+            padding-left: 40px ;
+        }
+        #intro{
+            display: flex;
+        }
+        .lect{
+            display: flex;
+        }
+        .lect table{
+            margin: 0px;
+        }
+        #lect_no{
+            position: relative;
+            left: 25px;
+            top: 93px;
+            right: 10px;
+            border:2px solid black;
+            width: 118px;
+            height: 30px;
+        }
+        .Day{
+            display: flex;
+        }
+        .Day table{
+            margin: 0px;
+        }
+        .day_time{
+            position: relative;
+            left: 25px;
+            top: 94px;
+            border: 2px solid black;
+            width: 118px;
+            height: 30px;
+        }
+        .day-name{
+            display: flex;
+        }
+        .r1{
+            position: relative;
+            left:25px;
+            top:95px;
+            border:2px solid black;
+            width:118px;
+            height:70px;
+        }
+        .day-name table{
+            margin: 0px;
+        }
+        .span{
+            border-right: none;
+        }
+        .span1{
+            border-left: none;
+        }
+        #lab1{
+            padding-left: 35px;
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover{
+            color: red;
+        }
+        a:link{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="C-name">
+            <h1>GLA University</h1>
+            Mathura, UP
+        </div>
+        <div class="head">
+            <h2 id="CTT">Class Time Table</h2>
+            <div id="intro"><p class="sec">Section: E</p>
+                <p class="sec"> Programe: Btech</p>
+                <p class="sec">Branch: CSE</p>
+            </div>
+        </div>
+        <div class="lect">
+            <table id="lect_no">
+                <tr>
+                    <th>Lecture no:</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>1</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>2</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>3</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>4</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>5</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>6</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>7</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>8</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>9</th>
+                </tr>
+            </table>
+            <table id="lect_no">
+                <tr>
+                    <th>10</th>
+                </tr>
+            </table>
+        </div>
+
+
+        <div class="Day">
+            <table class="day_time">
+                <tr>
+                    <th>Day_Time</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>08:00-9:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>09:00-10:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>10:00-11:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>11:00-12:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>12:00-01:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>01:00-02:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>02:00-03:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>03:00-04:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>04:00-05:00</th>
+                </tr>
+            </table>
+            <table class="day_time">
+                <tr>
+                    <th>05:00-06:00</th>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="day-name">
+            <table class="r1">
+                <tr>
+                    <th>Monday</th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>PQRH0001 <br> <a href="index.htm" target="_blank">Mr. Ayush Gupta</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>PCPH0002 <br> <a href="index.htm" target="_blank">Mr. Suresh Pratap Singh</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0011 <br><a href="index.htm" target="_blank">Mr. Shubham Mishra</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC1251 <br><a href="index.htm" target="_blank">Mr. Shiv Kumar Verma</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0022 <br><a href="index.htm" target="_blank">Mr. Sohil Khan</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0011/3E1<br><a href="index.htm" target="_blank">Mr. Shubham Mishra</a></th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th> TBPP <br><a href="index.htm" target="_blank">Mr. Akash Chaudhary</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1 span">
+                <tr>
+                    <th>Full Stack Track<br> Day Scholear</th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="day-name">
+            <table class="r1">
+                <tr>
+                    <th>Tuesday</th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC1251 <br> <a href="index.htm" target="_blank">Mr. Shiv Kumar Verma</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0022 <br> <a href="index.htm" target="_blank">Mr. Sohil Khan</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0011 <br> <a href="index.htm" target="_blank">Mr. Shubham Mishra</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>PQRH0001 <br> <a href="index.htm" target="_blank">Mr. Ayush Gupta</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0053 <br> <a href="index.htm" target="_blank">Mr. Madhus <br>udan Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0105 <br> <a href="index.htm" target="_blank">Mr. Jagjeet Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th> TBPP <br><a href="index.htm" target="_blank">Mr. Sanjay Madan</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1 span">
+                <tr>
+                    <th>DSA Track<br> Day Scholear</th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="day-name">
+            <table class="r1">
+                <tr>
+                    <th>Wednesday</th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC1251 <br> <a href="index.htm" target="_blank">Mr. Shiv Kumar Verma</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>PQRH0002 <br> <a href="index.htm" target="_blank">Mr. Suresh Pratap Singh</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0011 <br> <a href="index.htm" target="_blank">Mr. Shubham Mishra</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>PGDH0001 <br> <a href="index.htm" target="_blank">Ms. Anjali Mehra</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0053 <br><a href="index.htm" target="_blank">Mr. Madhus <br>udan Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th>BCSC0812 <br><a href="index.htm" target="_blank">Mr. Sohil Khan</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="day-name">
+            <table class="r1">
+                <tr>
+                    <th>Thursday</th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th>BCSC0281 <br><a href="index.htm" target="_blank">Mr. Shiv Kumar Verma</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>PVRH0001 <br><a href="index.htm" target="_blank">Mr. Shiv Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0053 <br><a href="index.htm" target="_blank">Mr. Madhus <br>udan Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0105 <br><a href="index.htm" target="_blank">Mr.Jagjeet Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th>BCSC0133/3E3 <br><a href="index.htm" target="_blank">Mr. Shivanshu Upadhyay</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            
+        </div>
+        <div class="day-name">
+            <table class="r1">
+                <tr>
+                    <th>Friday</th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th>BCSC0812 <br><a href="index.htm" target="_blank">Mr. Sohil Khan</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0011/3E3<br><a href="index.htm" target="_blank">Mr. Shubham Mishra</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0105 <br><a href="index.htm" target="_blank">Mr. Jagjeet Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th>BCSC0011/3E3<br><a href="index.htm" target="_blank">Mr. Shubham Mishra</a></th>
+                </tr>
+            </table>
+            <table class="r1 span">
+                <tr>
+                    <th>BCSC0133/3E1<br><a href="index.htm" target="_blank">Mr. Jagjeet Kumar</a></th>
+                </tr>
+            </table>
+            <table class="r1 span1">
+                <tr>
+                    <th>BCSC0133/3E2<br><a href="index.htm" target="_blank">Mr. Preshit desai</a></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            <table class="r1">
+                <tr>
+                    <th></th>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+</body>
+</html>
