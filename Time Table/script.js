@@ -1,4 +1,4 @@
-const subject_codes=["BCSC0011","BCSE0053","BCSE0281","BCSE1251","PCPH0002","PVRH001","PGDH0001","BCSC0812","PQRH0001","BCSE0105","BCSE0133","PQRH0002"];
+const subject_codes=["BCSC0011","BCSE0053","BCSE0281","BCSE1251","PCPH0002","PVRH001","PGDH0001","BCSC0022","BCSC0812","PQRH0001","BCSE0105","BCSE0133","PQRH0002"];
 const subject_names=["Theory Of Automata And Formal Languages","Agile Software Development","Full Stack Using Scripting Technologies Lab","Full Stack Using Scripting Technologies","Competitive Programming","Verbal Aptitude","Group Discussion & Personal Interview","Analysis And Design Of Algorithm","Analysis And Design Of Algorithm Lab","Quant & Reasoning Aptitude","Machine Learning","Machine Learning Lab","Logical Reasoning"];
 const faculty_info=[
     {"faculty":"Shubham Shukla","mail":"shubham.shukla@gla.ac.in","contact":"9236925601"},
