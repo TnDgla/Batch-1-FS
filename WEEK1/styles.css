@@ -1,0 +1,124 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fdfbfb, #ebedee);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+table {
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+table:hover {
+  transform: translateY(-3px);
+}
+
+th, td {
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+th {
+  background-color: #a3d5f5; 
+  color: #333;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #d1e7f5;
+}
+
+td {
+  font-size: 1rem;
+  color: #555;
+}
+
+thead th {
+  font-size: 1.5rem;
+  background-color: #f7d6e0; 
+  color: #555;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #f1bfc7;
+}
+
+th[colspan="5"] {
+  font-size: 1.3rem;
+  background-color: #f8e6a0; 
+  color: #555;
+}
+
+
+tbody tr:nth-child(odd) td {
+  background-color: #fdfdfd;
+}
+
+tbody tr:nth-child(even) td {
+  background-color: #fafafa;
+}
+
+
+a {
+  text-decoration: none;
+  color: #6a9bb8;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #8cc0d8;
+  transform: scale(1.05);
+}
+
+
+tr:nth-child(4) {
+  background-color: #f8ecd1; 
+  color: #777;
+  font-weight: bold;
+}
+
+
+th[rowspan="6"] {
+  background-color: #d1e7f5; 
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-right: 2px solid #f0f4f7;
+}
+@media screen and (max-width: 768px) {
+  table {
+      width: 95vw;
+  }
+
+  th, td {
+      font-size: 0.9rem;
+      padding: 10px;
+  }
+
+  th[colspan="5"] {
+      font-size: 1rem;
+  }
+
+  th[rowspan="6"] {
+      font-size: 1.1rem;
+  }
+
+  thead th {
+      font-size: 1.2rem;
+  }
+}
