@@ -1,0 +1,35 @@
+table {
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #dcdada;
+}
+
+.subject{
+    position:relative;
+}
+
+.teacher {
+    display: none;
+    position: absolute;
+    color: #ddd;
+    background-color: #1b1a1a;
+    border: 1px solid #ddd;
+    padding: 5px;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.subject:hover .teacher {
+    display: block;
+}
