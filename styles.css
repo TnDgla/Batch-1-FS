@@ -1,0 +1,180 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.main-title {
+    font-weight: 600;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.timetable-wrapper {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.timetable {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.timetable th {
+    background-color: #3498db;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+}
+
+.timetable td {
+    padding: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.timetable tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.timetable .hours {
+    width: 80px;
+    font-weight: 600;
+    background-color: #34495e;
+    color: white;
+    position: relative;
+}
+
+.timetable .hours div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+}
+
+.timetable .lunch {
+    background-color: #ecf0f1;
+    font-weight: 600;
+    color: #34495e;
+    text-align: center;
+}
+
+.subject {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.subject:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.science { background-color: #3498db; }
+.maths { background-color: #2ecc71; }
+.social { background-color: #e74c3c; }
+.hindi { background-color: #f39c12; }
+.english { background-color: #9b59b6; }
+.arts { background-color: #1abc9c; }
+.sports { background-color: #d35400; }
+.project { background-color: #34495e; }
+
+.modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #3498db;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.timetable-wrapper {
+    animation: fadeIn 1s ease-out;
+}
+
+
+@media (min-width: 576px) {
+    .timetable {
+        font-size: 0.8rem;
+    }
+
+    .timetable td, .timetable th {
+        padding: 10px 5px;
+    }
+
+    .subject {
+        padding: 5px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .timetable {
+        font-size: 0.85rem;
+    }
+
+    .timetable td, .timetable th {
+        padding: 12px 8px;
+    }
+
+    .subject {
+        padding: 8px;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .timetable {
+        font-size: 0.9rem;
+    }
+
+    .timetable td, .timetable th {
+        padding: 15px;
+    }
+
+    .subject {
+        padding: 10px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .timetable {
+        font-size: 1rem;
+    }
+
+    .timetable td, .timetable th {
+        padding: 20px;
+    }
+
+    .subject {
+        padding: 12px;
+    }
+}
