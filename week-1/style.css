@@ -1,0 +1,7 @@
+.timetable-cell:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+}
+th:hover{
+    color: blue;
+}
