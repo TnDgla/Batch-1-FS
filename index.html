@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Timetable</h2>
+        <div id="timetableSection">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Hours</th>
+                        <th>Mon</th>
+                        <th>Tue</th>
+                        <th>Wed</th>
+                        <th>Thurs</th>
+                        <th>Fri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th rowspan="2">Hours</th>
+                        <td><span class="teacher-link" onclick="showTeacherDetails('Mr. Smith')">Science</span></td>
+                        <td><span class="teacher-link" onclick="showTeacherDetails('Mr. John')">Maths</span></td>
+                        <td><span class="teacher-link" onclick="showTeacherDetails('Mr. Smith')">Science</span></td>
+                        <td><span class="teacher-link" onclick="showTeacherDetails('Mr. John')">Maths</span></td>
+                        <td>Arts</td>
+                    </tr>
+                    <tr>
+                        <td>Social</td>
+                        <td>Hindi</td>
+                        <td>English</td>
+                        <td>Social</td>
+                        <td>Sports</td>
+                    </tr>
+                    <tr>
+                        <td class="lunch" colspan="6">Lunch</td>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Hours</th>
+                        <td>Science</td>
+                        <td>Maths</td>
+                        <td>Science</td>
+                        <td>Maths</td>
+                        <td>Project</td>
+                    </tr>
+                    <tr>
+                        <td>Social</td>
+                        <td>Hindi</td>
+                        <td>English</td>
+                        <td>Social</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="teacherDetails">
+            <h3>Teacher Details</h3>
+            <p><strong>Name:</strong> <span id="teacherName"></span></p>
+            <p><strong>Email:</strong> <span id="teacherEmail"></span></p>
+            <h4>Contact Form</h4>
+            <form>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <button class="btn btn-secondary mt-3" onclick="hideTeacherDetails()">Back to Timetable</button>
+        </div>
+    </div>
+
+    <script>
+        function showTeacherDetails(teacherName) {
+            document.getElementById('timetableSection').style.display = 'none';
+            document.getElementById('teacherDetails').style.display = 'block';
+            document.getElementById('teacherName').textContent = teacherName;
+            let teacherEmail = teacherName === 'Mr. Smith' ? 'mrsmith@school.com' : 'mrjohn@school.com';
+            document.getElementById('teacherEmail').textContent = teacherEmail;
+        }
+
+        function hideTeacherDetails() {
+            document.getElementById('timetableSection').style.display = 'block';
+            document.getElementById('teacherDetails').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

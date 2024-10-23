@@ -1,0 +1,36 @@
+.container.mt-5 {
+    border: 2px solid #000;
+    padding: 20px; /* Padding around the timetable */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Background color for box */
+    max-width: 80%;
+    margin: 0 auto; /* Center align the box */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+}
+th {
+    font-weight: bold;
+}
+.lunch {
+    text-align: center;
+    font-weight: bold;
+}
+#teacherDetails {
+    display: none;
+    margin-top: 20px;
+}
+.teacher-link:hover {
+  
+    cursor: pointer;
+    color: #0056b3;
+}
+td:hover {
+    background-color: #f0f0f0; /* Change to the desired hover color */
+}
