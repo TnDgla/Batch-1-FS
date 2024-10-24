@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Teacher Details</h1>
+        <div id="teacherDetails">
+            <!-- Teacher details will be populated here -->
+        </div>
+        <a href="index.html" class="btn btn-primary mt-3 btn-success">Back to Timetable</a>
+        <a href="contact.html" class="btn btn-secondary mt-3 ms-2 btn-info">Contact Teacher</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const teacher = urlParams.get('teacher');
+            const subject = urlParams.get('subject');
+
+            const teacherDetails = document.getElementById('teacherDetails');
+            teacherDetails.innerHTML = `
+                <h2>${teacher}</h2>
+                <p><strong>Subject:</strong> ${subject}</p>
+                <p><strong>Email:</strong> ${teacher.toLowerCase().replace(' ', '')}@school.com</p>
+                <p><strong>Office Hours:</strong> Monday-Friday, 3:00 PM - 4:00 PM</p>
+            `;
+        });
+    </script>
+</body>
+</html>
