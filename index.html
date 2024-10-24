@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Timetable 3H</h1>
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Days/Hours</th>
+                    <th>10-11 AM</th>
+                    <th>11-12 AM</th>
+                    <th>12-1 PM</th>
+                    <th>1-2 PM</th>
+                    <th>2-3 PM</th>
+                    <th>3-4 PM</th>
+                    <th>4-5 PM</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MONDAY</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td onclick="showTeacher('DESIGN AND ANALYSIS OF ALGORITHMS')">Design and Analysis of Algorithms</td>
+                    <td class="lunch-cell">LUNCH</td>
+                    <td onclick="showTeacher('QUANTS AND APTITUDE')">Quant and Aptitude</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>TUESDAY</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td></td>
+                    <td class="lunch-cell">LUNCH</td>
+                    <td></td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td onclick="showTeacher('COMPETITIVE PROGRAMMING')">Competitive Programming</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">ML LAB</td>
+                </tr>
+                <tr>
+                    <td>WEDNESDAY</td>
+                    <td></td>
+                    <td></td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td class="lunch-cell">LUNCH</td>
+                    <td onclick="showTeacher('DESIGN AND ANALYSIS OF ALGORITHMS')">Design and Analysis of Algorithms Lab</td>
+                    <td onclick="showTeacher('DESIGN AND ANALYSIS OF ALGORITHMS')">Design and Analysis of Algorithms Lab</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                </tr>
+                <tr>
+                    <td>THURSDAY</td>
+                    <td onclick="showTeacher('DESIGN AND ANALYSIS OF ALGORITHMS')">Design and Analysis of Algorithms</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td class="lunch-cell">LUNCH</td>
+                    <td onclick="showTeacher('COMPETITIVE PROGRAMMING')">Competitive Programming</td>
+                    <td></td>
+                    <td>MNG CLASS</td>
+                </tr>
+                <tr>
+                    <td>FRIDAY</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td onclick="showTeacher('VERBAL APTITUDE')">Verbal Aptitude</td>
+                    <td class="lunch-cell">LUNCH</td>
+                    <td onclick="showTeacher('LOGICAL REASONING')">Logical Reasoning</td>
+                    <td onclick="showTeacher('GROUP DISCUSSION')">Group Discussion</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td>MNG CLASS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="teacher" class="modal">
+        <div class="content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="details"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
