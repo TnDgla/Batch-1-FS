@@ -9,7 +9,7 @@ function createnote(name,desc)
     if(name!="" && desc!="")
     {
         const newnote=document.createElement('div')
-        newnote.innerText=Name of task = ${name} \n description of task= ${desc};
+        newnote.innerText=`Name of task = ${name} \n description of task= ${desc}`;
         newnote.classList.add("note")
         root.appendChild(newnote)
         console.log(newnote);
