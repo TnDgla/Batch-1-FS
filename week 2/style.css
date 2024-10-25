@@ -1,0 +1,92 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background for a subtle look */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #333; /* Darker text for better readability */
+    margin-bottom: 20px;
+}
+
+div {
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 400px; /* Limit the width of inputs and buttons */
+}
+
+label {
+    display: block; /* Make labels block elements for better spacing */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #555; /* Gray color for the labels */
+}
+
+input[type="text"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for better usability */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 16px; /* Font size for readability */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding for comfort */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Consistent font size */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+#root {
+    margin-top: 20px; /* Space above the task list */
+    width: 100%;
+    max-width: 400px; /* Limit width of task list */
+}
+
+/* Note styles */
+.note {
+    background-color: #ffffff; /* White background for notes */
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 15px; /* Padding inside notes */
+    margin-bottom: 10px; /* Space between notes */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for notes */
+}
+
+.delete-btn {
+    margin-top: 10px; /* Space above delete button */
+    padding: 5px 10px; /* Padding for delete button */
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.delete-btn:hover {
+    background-color: #c82333; /* Darker shade on hover */
+}

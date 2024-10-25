@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Timetable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            max-width: 900px;
+            width: 100%;
+            border: 1px solid #e0e0e0;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .lunch {
+            background-color: #ff9999;
+            font-weight: bold;
+            color: #333;
+        }
+        .subject {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            color: #333;
+            transition: transform 0.2s, background-color 0.2s;
+            cursor: pointer;
+        }
+        .math { background-color: #ffcccb; }
+        .physics { background-color: #c2e0ff; }
+        .chemistry { background-color: #d0f0c0; }
+        .biology { background-color: #ffd700; }
+        .english { background-color: #dda0dd; }
+        .computer-science { background-color: #98fb98; }
+        .history { background-color: #ffa07a; }
+
+        td.subject:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 600px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 5px;
+            }
+        }
+        th:first-child, td:first-child {
+            background-color: #4a4a4a;
+            color: white;
+            font-weight: bold;
+        }
+        th {
+            background-color: #4a4a4a;
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            text-transform: uppercase;
+        }
+        th:first-child {
+            border-top-left-radius: 8px;
+        }
+        th:last-child {
+            border-top-right-radius: 8px;
+        }
+        tr:last-child td:first-child {
+            border-bottom-left-radius: 8px;
+        }
+        #info-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 300px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Student Timetable</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td class="subject math" data-room="101" data-faculty="Dr. Smith">Math</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject chemistry" data-room="301" data-faculty="Dr. Brown">Chemistry</td>
+                    <td class="subject biology" data-room="401" data-faculty="Prof. Davis">Biology</td>
+                    <td class="subject english" data-room="501" data-faculty="Ms. Wilson">English</td>
+                    <td class="subject computer-science" data-room="601" data-faculty="Mr. Lee">Computer Science</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject chemistry" data-room="301" data-faculty="Dr. Brown">Chemistry</td>
+                    <td class="subject math" data-room="101" data-faculty="Dr. Smith">Math</td>
+                    <td class="subject english" data-room="501" data-faculty="Ms. Wilson">English</td>
+                    <td class="subject computer-science" data-room="601" data-faculty="Mr. Lee">Computer Science</td>
+                    <td class="subject biology" data-room="401" data-faculty="Prof. Davis">Biology</td>
+                </tr>
+                <tr>
+                    <td>11:00 - 12:00</td>
+                    <td class="subject chemistry" data-room="301" data-faculty="Dr. Brown">Chemistry</td>
+                    <td class="subject biology" data-room="401" data-faculty="Prof. Davis">Biology</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject math" data-room="101" data-faculty="Dr. Smith">Math</td>
+                    <td class="subject history" data-room="701" data-faculty="Dr. Anderson">History</td>
+                    <td class="subject english" data-room="501" data-faculty="Ms. Wilson">English</td>
+                </tr>
+                <tr>
+                    <td>12:00 - 13:00</td>
+                    <td class="subject biology" data-room="401" data-faculty="Prof. Davis">Biology</td>
+                    <td class="subject math" data-room="101" data-faculty="Dr. Smith">Math</td>
+                    <td class="subject english" data-room="501" data-faculty="Ms. Wilson">English</td>
+                    <td class="subject computer-science" data-room="601" data-faculty="Mr. Lee">Computer Science</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject chemistry" data-room="301" data-faculty="Dr. Brown">Chemistry</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 14:00</td>
+                    <td colspan="6" class="lunch">Lunch Break</td>
+                </tr>
+                <tr>
+                    <td>14:00 - 15:00</td>
+                    <td class="subject english" data-room="501" data-faculty="Ms. Wilson">English</td>
+                    <td class="subject history" data-room="701" data-faculty="Dr. Anderson">History</td>
+                    <td class="subject computer-science" data-room="601" data-faculty="Mr. Lee">Computer Science</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject math" data-room="101" data-faculty="Dr. Smith">Math</td>
+                    <td class="subject history" data-room="701" data-faculty="Dr. Anderson">History</td>
+                </tr>
+                <tr>
+                    <td>15:00 - 16:00</td>
+                    <td class="subject history" data-room="701" data-faculty="Dr. Anderson">History</td>
+                    <td class="subject computer-science" data-room="601" data-faculty="Mr. Lee">Computer Science</td>
+                    <td class="subject biology" data-room="401" data-faculty="Prof. Davis">Biology</td>
+                    <td class="subject chemistry" data-room="301" data-faculty="Dr. Brown">Chemistry</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject math" data-room="101" data-faculty="Dr. Smith">Math</td>
+                </tr>
+                <tr>
+                    <td>16:00 - 17:00</td>
+                    <td class="subject computer-science" data-room="601" data-faculty="Mr. Lee">Computer Science</td>
+                    <td class="subject english" data-room="501" data-faculty="Ms. Wilson">English</td>
+                    <td class="subject history" data-room="701" data-faculty="Dr. Anderson">History</td>
+                    <td class="subject physics" data-room="201" data-faculty="Prof. Johnson">Physics</td>
+                    <td class="subject chemistry" data-room="301" data-faculty="Dr. Brown">Chemistry</td>
+                    <td class="subject biology" data-room="401" data-faculty="Prof. Davis">Biology</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="subject-name"></h2>
+            <p id="room-info"></p>
+            <p id="faculty-info"></p>
+        </div>
+    </div>
+
+    <script>
+        const subjects = document.querySelectorAll('.subject');
+        const modal = document.getElementById('info-modal');
+        const closeBtn = document.querySelector('.close');
+        const subjectName = document.getElementById('subject-name');
+        const roomInfo = document.getElementById('room-info');
+        const facultyInfo = document.getElementById('faculty-info');
+
+        subjects.forEach(subject => {
+            subject.addEventListener('click', () => {
+                const room = subject.getAttribute('data-room');
+                const faculty = subject.getAttribute('data-faculty');
+                subjectName.textContent = subject.textContent;
+                roomInfo.textContent = Room: ${room};
+                facultyInfo.textContent =` Faculty: ${faculty}`;
+                modal.style.display = 'block';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
