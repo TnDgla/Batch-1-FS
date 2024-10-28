@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <table border="2" cellspacing="2" cellpadding="2">
+        <tbody align="center">
+            <tr>
+                <th colspan="6">timetable</th>
+            </tr>
+
+            <tr>
+                <th rowspan="6">hours</th>
+                <th>mon</th>
+                <th>tue</th>
+                <th>wed</th>
+                <th>thurs</th>
+                <th>fri</th>
+            </tr>
+
+            <tr align="left">
+                <td class="clickable">science</td>
+                <td class="clickable">maths</td>
+                <td class="clickable">science</td>
+                <td class="clickable">maths</td>
+                <td class="clickable">arts</td>
+            </tr>
+
+            <tr align="left">
+                <td class="clickable">social</td>
+                <td class="clickable">hindi</td>
+                <td class="clickable">english</td>
+                <td class="clickable">social</td>
+                <td class="clickable">sports</td>
+            </tr>
+
+            <tr>
+                <th colspan="5">lunch</th>
+            </tr>
+
+            <tr align="left">
+                <td class="clickable">science</td>
+                <td class="clickable">maths</td>
+                <td class="clickable">science</td>
+                <td class="clickable">maths</td>
+                <td class="clickable" rowspan="2">project</td>
+            </tr>
+
+            <tr align="left">
+                <td class="clickable">social</td>
+                <td class="clickable">hindi</td>
+                <td class="clickable">english</td>
+                <td class="clickable">social</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <script>
+     
+        const clickableCells = document.querySelectorAll('.clickable');
+    
+         
+        clickableCells.forEach(cell => {
+            cell.addEventListener('click', function() {
+                window.location.href = 'teacher.html';
+            });
+        });
+    </script>
+    
+</body>
+</html>
