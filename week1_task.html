@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+
+    h1 {
+        margin-bottom: 20px;
+        }
+
+    .timetable table {
+    width: 80%;
+    margin: 0 auto;
+    }
+
+    th, td {
+    border: 1px double #333;
+    padding: 10px;
+    text-align: center;
+    }
+
+    th {
+    background-color: #f2f2f2;
+    }
+
+.lunch-row td {
+    background-color: #f4e5a1;
+    font-weight: bold;
+    text-align: center;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.clickable:hover {
+    background-color: #d1e0ff;
+}
+
+    </style>
+        
+    </script>
+</head>
+<body>
+    
+    <div class="timetable">
+        <table>
+            
+            <thead>
+                <th colspan="6">timetable
+                    </th>  
+                    
+                    
+                <tr>
+                    
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    
+                    <td class="clickable" onclick="openTeacherPage('science')">Science</td>
+                    <td class="clickable" onclick="openTeacherPage('maths')">Maths</td>
+                    <td class="clickable" onclick="openTeacherPage('science')">Science</td>
+                    <td class="clickable" onclick="openTeacherPage('maths')">Maths</td>
+                    <td class="clickable" onclick="openTeacherPage('arts')">Arts</td>
+                </tr>
+                <tr>
+                    
+                    <td class="clickable" onclick="openTeacherPage('social')">Social</td>
+                    <td class="clickable" onclick="openTeacherPage('hindi')">Hindi</td>
+                    <td class="clickable" onclick="openTeacherPage('english')">English</td>
+                    <td class="clickable" onclick="openTeacherPage('social')">Social</td>
+                    <td class="clickable" onclick="openTeacherPage('sports')">Sports</td>
+                </tr>
+                <tr class="lunch-row">
+                    <td colspan="6">Lunch</td>
+                </tr>
+                <tr>
+                    
+                    <td class="clickable" onclick="openTeacherPage('science')">Science</td>
+                    <td class="clickable" onclick="openTeacherPage('maths')">Maths</td>
+                    <td class="clickable" onclick="openTeacherPage('science')">Science</td>
+                    <td class="clickable" onclick="openTeacherPage('maths')">Maths</td>
+                    <td class="clickable" onclick="openTeacherPage('project')">Project</td>
+                </tr>
+                <tr>
+                    
+                    <td class="clickable" onclick="openTeacherPage('social')">Social</td>
+                    <td class="clickable" onclick="openTeacherPage('hindi')">Hindi</td>
+                    <td class="clickable" onclick="openTeacherPage('english')">English</td>
+                    <td class="clickable" onclick="openTeacherPage('social')">Social</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script >
+        function openTeacherPage(subject) {
+    
+    window.location.href = subject + "-teacher.html";
+}
+
+    </script>
+</body>
+</html>
