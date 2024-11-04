@@ -12,4 +12,4 @@ o	Feature 3: e.g., Improve UI and add ui interactions like hover, click etc <br>
 Tech Stack and Tools
 •	Front-End: Html/Css/Bootstrap/JS, etc.
 
-![image](https://github.com/user-attachments/assets/51ed2eea-253a-436a-b37a-25988ab6081f)
+
