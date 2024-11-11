@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            text-align: center;
+            padding: 15px;
+        }
+        th {
+            font-weight: bold;
+        }
+        .header-row th {
+            background-color: #f4f4f4;
+        }
+        .rowspan {
+            vertical-align: middle;
+            font-weight: bold;
+        }
+        .lunch-row td {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="header-row">
+            <th colspan="6">Timetable</th>
+        </tr>
+        <tr>
+            <td class="rowspan" rowspan="6">Hours</td>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thurs</th>
+            <th>Fri</th>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>Hindi</td>
+            <td>English</td>
+            <td>Social</td>
+            <td>Sports</td>
+        </tr>
+        <tr class="lunch-row">
+            <td colspan="5">Lunch</td>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Project</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>Hindi</td>
+            <td>English</td>
+            <td>Social</td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
