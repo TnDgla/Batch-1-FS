@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tpp5.css">
+</head>
+<body>
+  <h2>To do list</h2>
+ <nav>
+    <a href="">home</a>
+    <a href="">about us</a>
+   <button id="deleteAllBtn">Delete</button>
+   <button id="addTaskBtn">Add</button>
+ </nav>
+ <div id="addTaskForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" required />
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" required />
+
+    <label for="taskInput">Task Description:</label>
+    <input type="text" id="taskInput" placeholder="Enter your task" required />
+
+    <button onclick="addTask()">Submit Task</button>
+  </div>
+
+  
+  <div id="todoList"></div>
+
+  
+  <script src="tpp5.js"></script>
+
+   
+    
+</body>
+</html>

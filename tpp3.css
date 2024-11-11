@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  nav {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+  }
+  #addTaskBtn {
+    background-color: #4CAF50;
+  }
+  #deleteAllBtn {
+    background-color: #f44336;
+  }
+  #addTaskForm {
+    display: none;
+    margin-top: 10px;
+  }
+  #addTaskForm label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+  }
+  #addTaskForm input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  .task {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+  .task button {
+    align-self: flex-start;
+    margin-top: 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .task button:hover {
+    background: #ff1a1a;
+  }
+  
