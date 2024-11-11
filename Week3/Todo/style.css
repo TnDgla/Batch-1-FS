@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(196, 173, 173);
+}
+
+.navbar{
+    height: 5%;
+    width: 100%;
+    background-color: rgb(136, 177, 136);
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+}
+.add{
+    position: relative;
+    margin: 1%;
+    height: 30%;
+    width: 12%;
+    background-color: rgb(218, 218, 124);
+    border-radius: 5%;
+}
+h2{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 3px solid black;
+    padding: 10%;
+}
+h2:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+.popup {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: rgb(139, 144, 204);
+    padding: 20px;
+    border-radius: 8px;
+    width: 30%;
+    height: 40%;
+    text-align: center;
+    color: white;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+input{
+    padding: 2%;
+}
+button[type='submit']{
+    height: 50px;
+    width: 50%;
+    background-color: rgb(87, 189, 109);
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+.todo{
+    font-size: 3em;
+    font-weight: bold;
+}

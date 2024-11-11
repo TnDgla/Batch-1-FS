@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url(https://img.freepik.com/free-vector/background-wave-minimalist-modern-style_483537-5220.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.navbar {
+    width: 100%;
+    min-height: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(198, 187, 168);
+}
+
+
+.links {
+    display: flex;
+    gap: 20px; 
+    position: relative;
+    right: 10px;
+    margin-right: 3%;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+
+h1 {
+    margin-top: 1%;
+    font-size: 2.5rem;
+}
+
+
+table {
+    width: 90%; 
+    margin: auto; 
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+table, tr, td, th {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+thead th {
+    font-size: 1.5rem; 
+    background-color: rgb(198, 187, 168);
+    color: white;
+}
+
+
+tbody tr td a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+tbody tr td a:hover {
+    color: blue;
+    font-size: 2.1rem;
+}
+
+
+@media (max-width: 768px) {
+    table {
+        width: 100%; 
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+h1{
+    font-size: 3rem;
+    text-shadow: 3px 3px 4px white;
+}
+
+tr:nth-child(1){
+    background-color: rgb(140, 122, 122);
+    color: orange;
+    text-shadow: 2px 2px 5px black;
+}
+
+.text{
+    font-size: 2rem;
+}
+
+tr:nth-child(4){
+    background-color: snow;
+}
+
+

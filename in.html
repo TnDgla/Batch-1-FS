@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register Toggle</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .left-panel {
+            flex: 1;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            display: none; /* Initially hide images */
+        }
+
+        .slider img:first-child {
+            display: block; /* Show the first image by default */
+        }
+
+        .right-panel {
+            flex: 1;
+            padding: 20px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            width: 100%;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        .form.hidden {
+            display: none; /* Hide the registration form initially */
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+        #toggle-button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="slider">
+                <img src="https://images.unsplash.com/photo-1720048170996-40507a45c720?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 1">
+                <img src="https://plus.unsplash.com/premium_photo-1728391710545-3d7d0bcd0b21?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 2">
+                <img src="https://images.unsplash.com/photo-1729433321272-9243b22c5f6e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 3">
+                <img src="https://images.unsplash.com/photo-1729508418289-75baec809821?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Image 4">
+                <!-- Add more images as needed -->
+            </div>
+        </div>
+        <div class="right-panel">
+            <h2 id="form-title">Login</h2>
+            <div class="form-container">
+                <form id="login-form" class="form">
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <form id="registration-form" class="form hidden">
+                    <input type="text" placeholder="Username" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+            <button id="toggle-button">Switch to Registration</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.getElementById('toggle-button');
+            const loginForm = document.getElementById('login-form');
+            const registrationForm = document.getElementById('registration-form');
+            const formTitle = document.getElementById('form-title');
+
+            toggleButton.addEventListener('click', () => {
+                // Toggle visibility
+                loginForm.classList.toggle('hidden');
+                registrationForm.classList.toggle('hidden');
+
+                // Change button text based on the current form
+                if (loginForm.classList.contains('hidden')) {
+                    formTitle.textContent = 'Register';
+                    toggleButton.textContent = 'Switch to Login';
+                } else {
+                    formTitle.textContent = 'Login';
+                    toggleButton.textContent = 'Switch to Registration';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

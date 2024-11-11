@@ -1,0 +1,11 @@
+
+Bootstrap5
+Name 						Dimension	Availability
+Extra Small			xs			<576px		100%	
+Small				sm			576-768		720px
+Medium				md			768-992		960px
+Large				lg			992-1200	1140px
+Extra Large			xl			1200-1400
+							1200-1300	1260
+							1300-1400	1320	
+Extra Extra Large	xxl		>1400		1320

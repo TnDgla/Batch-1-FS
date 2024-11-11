@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Delete All</a>
+        </div>
+        <div class="content">
+            <div class="add" id="openForm">
+                <h2>Add</h2>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="popup" id="popupForm">
+        <div class="popup-content">
+            <span class="todo">To-Do</span>
+            <span class="close-btn" id="closeForm">&times;</span>
+            <form action="">
+               <div>
+                    <label for="title">Title</label>
+                    <input type="text" name="" id="title" placeholder="Title">
+               </div>
+               <div>
+                    <label for="desc">Description</label>
+                    <input type="text" name="" id="desc" placeholder="Description.....">
+               </div>
+               <div>
+                    <label for="time">Time</label>
+                    <input type="time" name="" id="time">
+               </div>
+               <div>
+                    <button type="submit">Add</button>
+               </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- const div=document.createElement('div')
+div.style.height=100px
+body.appendChild(div) -->

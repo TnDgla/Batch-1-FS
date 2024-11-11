@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background-image: url(https://img.freepik.com/free-vector/background-wave-minimalist-modern-style_483537-5220.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgb(198, 187, 168);
+}
+
+.links {
+    display: flex;
+    gap: 20px; 
+    position: relative;
+    right: 10px;
+    margin-right: 3%;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.content {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.head {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.vid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    overflow: auto; 
+    height: 100%; 
+}
+
+.vid1, .vid2, .vid3, .vid4, .vid5, .vid6, .vid7, .vid8, .vid9 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+iframe {
+    width: 420px;
+    height: 315px;
+    
+}
+
+.footer {
+    padding: 20px;
+    background-color: rgb(198, 187, 168);
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+.intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.intro img{
+    border: 2px solid black;
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px black,
+                -5px -5px 10px black;
+}
