@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4 main-title">Class Timetable</h1>
+        <div class="table-responsive timetable-wrapper">
+            <table class="table table-bordered timetable">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hours" rowspan="5">
+                            <div>Hours</div>
+                        </td>
+                        <td><a href="#" class="subject science" data-teacher="Dr. Sharma">Science</a></td>
+                        <td><a href="#" class="subject maths" data-teacher="Mrs. Gupta">Maths</a></td>
+                        <td><a href="#" class="subject science" data-teacher="Dr. Sharma">Science</a></td>
+                        <td><a href="#" class="subject maths" data-teacher="Mrs. Gupta">Maths</a></td>
+                        <td><a href="#" class="subject arts" data-teacher="Mr. Reddy">Arts</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="subject social" data-teacher="Mrs. Desai">Social</a></td>
+                        <td><a href="#" class="subject hindi" data-teacher="Mr. Patel">Hindi</a></td>
+                        <td><a href="#" class="subject english" data-teacher="Ms. Kulkarni">English</a></td>
+                        <td><a href="#" class="subject social" data-teacher="Mrs. Desai">Social</a></td>
+                        <td><a href="#" class="subject sports" data-teacher="Mr. Singh">Sports</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="lunch">Lunch Break</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="subject science" data-teacher="Dr. Sharma">Science</a></td>
+                        <td><a href="#" class="subject maths" data-teacher="Mrs. Gupta">Maths</a></td>
+                        <td><a href="#" class="subject science" data-teacher="Dr. Sharma">Science</a></td>
+                        <td><a href="#" class="subject maths" data-teacher="Mrs. Gupta">Maths</a></td>
+                        <td rowspan="2" class="align-middle">
+                            <a href="#" class="subject project" data-teacher="Mrs. Chatterjee">Project</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="subject social" data-teacher="Mrs. Desai">Social</a></td>
+                        <td><a href="#" class="subject hindi" data-teacher="Mr. Patel">Hindi</a></td>
+                        <td><a href="#" class="subject english" data-teacher="Ms. Kulkarni">English</a></td>
+                        <td><a href="#" class="subject social" data-teacher="Mrs. Desai">Social</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
