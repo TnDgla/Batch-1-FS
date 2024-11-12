@@ -1,0 +1,20 @@
+{
+    "dm": {
+        "name" : "Brajesh Kumar Shukla",
+        "info" : "Data Mining Teacher",
+        "email" : "brajesh.shukla@gla.ac.in",
+        "phone" : "8290994353"
+    },
+    "nlp": {
+        "name" : "Ankur Mishra",
+        "info" : "Natural Language Processing Teacher",
+        "email" : "ankur.mishra@gla.ac.in",
+        "phone" : "9256497472"
+    },
+    "dsa": {
+        "name" : "Sohil Khan",
+        "info" : "Data Structures and Algorithms Teacher",
+        "email" : "sohil00017@gmail.com",
+        "phone" : "7900352613"
+    }
+}
