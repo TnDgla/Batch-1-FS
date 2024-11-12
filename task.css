@@ -1,0 +1,17 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+
+    border: 4px solid black;
+
+
+}
+th{
+    border: 1px solid black;
+}
+td{
+    border: 1px solid black;
+}
