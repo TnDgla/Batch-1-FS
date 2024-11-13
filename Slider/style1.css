@@ -1,0 +1,50 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+.slider{
+    width: 50vw;
+    height:100vh;
+    position: relative;
+}
+
+.slider img{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    object-fit: fill;
+}
+
+.slider img:first-child{
+    z-index:1;
+}
+.slider img:nth-child(2){
+    z-index:0;
+}  
+.slider .navigation-dot{
+    z-index: 2;
+}
+
+.navigation-dot{
+    position: absolute;
+    right:2px;
+    top:5px;
+    text-align: center;
+}
+
+.dot{
+    cursor:pointer;
+    height:15px;
+    width:15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+.active, .dot:hover{
+    background-color: #717171;
+}
