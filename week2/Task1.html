@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <div>
+        <h1>To-Do List</h1>
+    </div>
+    <form id="todo">
+        <input type="text" id="task" placeholder="Enter a task">
+    </form>
+    <br>
+    <button id="Addbuttn">Add a task</button>
+    <button id="delbuttn">Delete a task</button>
+    <ul id="taskList"></ul>
+    
+    <script>
+        const items = document.getElementById('taskList');
+        const delbuttn = document.getElementById('delbuttn');
+        const Addbuttn = document.getElementById('Addbuttn');
+        const taskAdd = document.getElementById('task');
+
+        Addbuttn.addEventListener('click', function() {
+            if (taskAdd.value != '') {
+                const list = document.createElement("li");
+                list.innerText = taskAdd.value;
+                list.classList.add('list');
+                items.appendChild(list);
+                taskAdd.value = '';
+            }
+        });
+
+        delbuttn.addEventListener('click', function() {
+            if (items.hasChildNodes()) {
+                items.removeChild(items.lastChild);
+            }
+        });
+    </script>
+</body>
+</html>
