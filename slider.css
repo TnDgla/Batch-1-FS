@@ -1,0 +1,17 @@
+.container-fluid{
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.slide,.carousel-inner,.slide-image{
+    height: 100%;
+}
+
+.slide-image img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.col{
+    height: 98vh;
+}
