@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SwiperJs</title>
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+        />
+        <!-- Link Swiper's CSS -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+
+        <!-- Demo styles -->
+        <style>
+            html,
+            body {
+                position: relative;
+                height: 100%;
+            }
+
+            body {
+                background: #eee;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background: #fff;
+                font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+
+            html,
+            body {
+                position: relative;
+                height: 100%;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .swiper {
+                width: 240px;
+                height: 320px;
+            }
+
+            .swiper-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 18px;
+                font-size: 22px;
+                font-weight: bold;
+                color: #fff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Swiper -->
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1731291212442-810b296619f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1726094051307-a55a8ea52314?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxNnx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1731021470631-255095ce4045?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1731243736810-bea5f581a1ca?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0MHx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1730669185590-2ed0736948d9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw0OXx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://plus.unsplash.com/premium_photo-1730857515548-4151598219f1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3Mnx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1731164131308-4c7a94cb7515?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw4M3x8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                        src="https://images.unsplash.com/photo-1726083218617-6b8a0000e574?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5OXx8fGVufDB8fHx8fA%3D%3D"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "cards",
+                grabCursor: true,
+            });
+        </script>
+    </body>
+</html>
