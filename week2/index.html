@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slider" id="slider">
+            <img id="img1"  src="./img/side.jpg" alt="">
+            <img id="img2"  src="./img/img2.avif" alt="">
+            <div class="nav-slider">
+                <span class="dot active" onclick="changeSlider(1)"></span>
+                <span closs="dot active" onclick="changeSlider(2)"></span>
+                <span closs="dot active" onclick="changeSlider(2)"></span>
+                <span closs="dot active" onclick="changeSlider(2)"></span>
+            </div>
+        </div>
+        <div class="auth">
+            <img src="./img/logo.svg" alt="">      
+            <div class="login">  
+                <h2>Log In</h2>   
+                <select name="option" class="option">
+                    <option value="ra">ram</option>
+                    <option value="s">s</option>
+                    <option value="df">df</option>
+                    <option value="dsg">dsg</option>
+                </select>
+                <input type="text" placeholder="username">
+                <input type="password" placeholder="password">
+                <div class="forget">Forgot your password?</div>
+                <button>Login</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
