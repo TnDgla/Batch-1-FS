@@ -1,0 +1,43 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: beige;
+}
+
+.alarm-container{
+    margin: top 100px;
+
+}
+
+.clock{
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+
+.alarm-settings input{
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.hidden{
+    display:none;
+}
+
+#alarm-alert {
+    margin-top: 20px;
+    background-color: burlywood;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    animation: flash 1s infinite;
+  }
+  
+  @keyframes flash {
+    0%, 100% {
+      background-color:crimson;
+    }
+    50% {
+      background-color: #ff7961;
+    }
+  }
