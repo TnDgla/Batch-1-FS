@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm System</title>
+  <link rel="stylesheet" href="alarm.css">
+</head>
+<body>
+  <div class="alarm-container">
+    <h1>Alarm System</h1>
+    <div class="clock" id="current-time">00:00:00</div>
+    <div class="alarm-settings">
+      <input type="time" id="alarm-time">
+      <button id="set-alarm">Set Alarm</button>
+    </div>
+    <div id="alarm-alert" class="hidden">
+      <p>Alarm is ringing!</p>
+      <button id="snooze-alarm">Snooze</button>
+      <button id="stop-alarm">Stop</button>
+    </div>
+  </div>
+  <script src="alarm.js"></script>
+</body>
+</html>

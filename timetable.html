@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="timetable.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Class Timetable</h2>
+        <table class="table table-bordered text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Hours</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:00</td>
+                    <td class="subject" data-subject="Science" data-teacher="abc">Science</td>
+                    <td class="subject" data-subject="Maths" data-teacher="abc">Maths</td>
+                    <td class="subject" data-subject="Science" data-teacher="abc">Science</td>
+                    <td class="subject" data-subject="Maths" data-teacher="abc">Maths</td>
+                    <td class="subject" data-subject="Arts" data-teacher="abc">Arts</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:00</td>
+                    <td class="subject" data-subject="Social" data-teacher="abc">Social</td>
+                    <td class="subject" data-subject="Hindi" data-teacher="abc">Hindi</td>
+                    <td class="subject" data-subject="English" data-teacher="abc">English</td>
+                    <td class="subject" data-subject="Social" data-teacher="abc">Social</td>
+                    <td class="subject" data-subject="Sports" data-teacher="abc">Sports</td>
+                </tr>
+                <tr>
+                    <td class="bg-light">Lunch</td>
+                    <td class="bg-light" colspan="5">12:00 - 1:00</td>
+                </tr>
+                <tr>
+                    <td>1:00 - 2:00</td>
+                    <td class="subject" data-subject="Science" data-teacher="abc">Science</td>
+                    <td class="subject" data-subject="Maths" data-teacher="abc">Maths</td>
+                    <td class="subject" data-subject="Science" data-teacher="abc">Science</td>
+                    <td class="subject" data-subject="Maths" data-teacher="abc">Maths</td>
+                    <td class="subject" data-subject="Project" data-teacher="abc">Project</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="timetable.js"></script>
+</body>
+</html>
