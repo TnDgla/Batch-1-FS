@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="toggleFormButton">Create To-Do</button>
+    <button id="deleteAllButton">Delete All</button> <!-- New Delete All button -->
+    <div id="todoFormContainer" class="hidden">
+      <h2>To-Do List</h2>
+      <form id="todoForm">
+        <input type="hidden" id="todoId">
+        <label for="task">Task:</label>
+        <input type="text" id="task" required>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" required>
+        
+        <label for="time">Time:</label>
+        <input type="time" id="time" required>
+        
+        <button type="submit" id="submitButton">Add Task</button>
+      </form>
+    </div>
+    <ul id="todoList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
