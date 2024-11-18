@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body {
+            background-color: rgb(92, 164, 164);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #io {
+            background-color: aqua;
+            width: 90%; /* Adjust as needed */
+            max-width: 1200px; /* Adjust as needed */
+            padding: 20px;
+            border: 1px solid black; /* Example border */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black; /* Example border */
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: lightgray;
+        }
+        td {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="io">
+        <table border="1">
+            <tr>
+                <th colspan="8">Time Table</th>
+            </tr>
+            <tr>
+                <th>Lecture</th>
+                <th>I</th>
+                <th>II</th>
+                <th>III</th>
+                <th>IV</th>
+                <th>V</th>
+                <th>VI</th>
+                <th>VII</th>
+            </tr>
+            <tr>
+                <th>Day/Time</th>
+                <th>08:00-09:00</th>
+                <th>09:00-10:00</th>
+                <th>10:00-11:00</th>
+                <th>11:00-12:00</th>
+                <th>12:00-01:00</th>
+                <th>01:00-02:00</th>
+                <th>02:00-03:00</th>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>Maths</td>
+                <td>DSA</td>
+                <td>English</td>
+                <td rowspan="5">
+                    <h4>Lunch</h4>
+                </td>
+                <td>OS</td>
+                <td>Microprocessor</td>
+                <td>Micro lab</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>DSA</td>
+                <td>English</td>
+                <td>CN</td>
+                <td>OS</td>
+                <td>Microprocessor</td>
+                <td>OS lab</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>DSA</td>
+                <td>Maths</td>
+                <td>OS</td>
+                <td>English</td>
+                <td>Microprocessor</td>
+                <td>CN</td>
+            </tr>
+            <tr>
+                <td>Thursday</td>
+                <td>OS</td>
+                <td>Maths</td>
+                <td>DSA</td>
+                <td>English</td>
+                <td>Free lecture</td>
+                <td>CN</td>
+            </tr>
+            <tr>
+                <td>Friday</td>
+                <td>OS</td>
+                <td>Microprocessor</td>
+                <td>CN</td>
+                <td>English</td>
+                <td>Free lecture</td>
+                <td>Free lecture</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
