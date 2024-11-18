@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Timetable</h1>
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9-10 AM</td>
+                    <td onclick="showTeacher('PROGRAMMING BASICS')">Programming Basics</td>
+                    <td onclick="showTeacher('DATABASE SYSTEMS')">Database Systems</td>
+                    <td onclick="showTeacher('NETWORKING')">Networking</td>
+                    <td onclick="showTeacher('WEB DEVELOPMENT')">Web Development</td>
+                    <td onclick="showTeacher('SOFTWARE TESTING')">Software Testing</td>
+                </tr>
+                <tr>
+                    <td>10-11 AM</td>
+                    <td onclick="showTeacher('PROGRAMMING LAB')">Programming Lab</td>
+                    <td onclick="showTeacher('DATABASE SYSTEMS LAB')">Database Systems Lab</td>
+                    <td onclick="showTeacher('NETWORKING')">Networking</td>
+                    <td onclick="showTeacher('WEB DEVELOPMENT LAB')">Web Development Lab</td>
+                    <td onclick="showTeacher('SOFTWARE TESTING')">Software Testing</td>
+                </tr>
+                <tr>
+                    <td>11-12 PM</td>
+                    <td onclick="showTeacher('PROGRAMMING BASICS')">Programming Basics</td>
+                    <td onclick="showTeacher('DATABASE SYSTEMS')">Database Systems</td>
+                    <td onclick="showTeacher('NETWORKING LAB')">Networking Lab</td>
+                    <td onclick="showTeacher('WEB DEVELOPMENT')">Web Development</td>
+                    <td onclick="showTeacher('SOFTWARE TESTING')">Software Testing</td>
+                </tr>
+                <tr>
+                    <td>12-1 PM</td>
+                    <td onclick="showTeacher('Lunch')" colspan="5" class="lunch">Lunch Break</td>
+                </tr>
+                <tr>
+                    <td>1-2 PM</td>
+                    <td onclick="showTeacher('DATABASE SYSTEMS')">Database Systems</td>
+                    <td onclick="showTeacher('PROGRAMMING BASICS')">Programming Basics</td>
+                    <td onclick="showTeacher('SOFTWARE TESTING')">Software Testing</td>
+                    <td onclick="showTeacher('WEB DEVELOPMENT')">Web Development</td>
+                    <td onclick="showTeacher('NETWORKING')">Networking</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="teacher" class="modal">
+        <div class="content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="details"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
