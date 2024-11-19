@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Make your Todo List</h1>
+        <textarea name="" id="task" placeholder="Enter your task...."></textarea>
+        <ol id="todo"></ol>
+    </main>
+
+
+    <button id="addbtn" type="submit">Add Task</button>
+    <button id="delbtn" type="submit">Remove Task</button>
+    <button id="delall" type="submit">Delete All Task</button>
+
+    <script>
+        const items=document.getElementById('todo')
+        const addBtn=document.getElementById('addbtn')
+        const delBtn=document.getElementById('delbtn')
+        const taskAdd=document.getElementById('task')
+
+        addBtn.addEventListener('click',function(){
+            var inputValue=document.getElementById('task').value
+            if(inputValue!=''){
+                var li=document.createElement('li')
+                var t=document.createTextNode(inputValue)
+                li.appendChild(t)
+                items.appendChild(li)
+                document.getElementById('task').value=""
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::before{
+            content: "😎";
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, quibusdam! Perferendis laborum autem placeat libero earum tempore quis odio magnam, minima, incidunt sapiente esse, nobis distinctio? Molestiae maiores repudiandae reprehenderit?</p>
+    <button class="btn">Google</button>
+    <script>
+        const bttn=document.querySelector('.btn');
+        bttn.addEventListener('click',()=>{
+            window.open('https://www.google.com/',"","width:500 & height:500")
+        })
+    </script>
+</body>
+</html>
