@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Timetable</h1>
+        <table>
+            <tr>
+                <th>Days</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+            </tr>
+            <tr>
+                <td rowspan="5">Hours</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Science&teacher=Mr. Smith'">Science</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Maths&teacher=Ms. Jones'">Maths</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Science&teacher=Mr. Smith'">Science</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Maths&teacher=Ms. Jones'">Maths</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Arts&teacher=Mrs. Watson'">Arts</td>
+            </tr>
+            <tr>
+                <td class="box" onclick="location.href='teachers.html?subject=Social Studies&teacher=Mr. John'">Social Studies</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Hindi&teacher=Mr. Kumar'">Hindi</td>
+                <td class="box" onclick="location.href='teachers.html?subject=English&teacher=Ms. Brown'">English</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Social Studies&teacher=Mr. John'">Social Studies</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Sports&teacher=Mr. Ken'">Sports</td>
+            </tr>
+            <tr class="lunch">
+                <td colspan="6">Lunch</td>
+            </tr>
+            <tr>
+                <td class="box" onclick="location.href='teachers.html?subject=Science&teacher=Mr. Smith'">Science</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Maths&teacher=Ms. Jones'">Maths</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Science&teacher=Mr. Smith'">Science</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Maths&teacher=Ms. Jones'">Maths</td>
+                <td class="box" rowspan="2" onclick="location.href='teachers.html?subject=Project&teacher=Mr. Davis'">Project</td>
+            </tr>
+            <tr>
+                <td class="box" onclick="location.href='teachers.html?subject=Social Studies&teacher=Mr. John'">Social Studies</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Hindi&teacher=Mr. Kumar'">Hindi</td>
+                <td class="box" onclick="location.href='teachers.html?subject=English&teacher=Ms. Brown'">English</td>
+                <td class="box" onclick="location.href='teachers.html?subject=Social Studies&teacher=Mr. John'">Social Studies</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

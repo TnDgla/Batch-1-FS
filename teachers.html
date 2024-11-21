@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Teacher Details</h1>
+        <div id="details">
+        </div>
+        <a href="index1.html" class="bckbtn">Timetable</a>
+    </div>
+
+    <script>
+        const buttons = new URLSearchParams(window.location.search);
+        const subject = buttons.get('subject');
+        const teacher = buttons.get('teacher');
+
+        document.getElementById('details').innerHTML = `<p>Subject: ${subject}</p><p>Teacher: ${teacher}</p>`;
+    </script>
+</body>
+</html>
