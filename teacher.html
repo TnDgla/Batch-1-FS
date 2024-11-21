@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .details {
+            padding: 20px;
+            background-color: #f2f2f2;
+            margin: 50px auto;
+            width: 50%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="details">
+        <h2>Teacher Details</h2>
+        <p id="teacherDetails"></p>
+    </div>
+
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+        function showTeacherDetails(subject) {
+            const teacher = {
+                'Machine Learning': '<b>Jagdish Kumar</b> - jagdishkumar@gla.ac.in<br>Room: AB1 201, Contact: 791558602',
+                'Theory Of Automata': '<b>Nitu Faujdar</b> - nitufaujdar_@gla.ac.in<br>Room: AB9 106, Contact: 8955622330',
+                'Agile Software Development': '<b>Sonal Singh</b> - sonalsingh_cs22@gla.ac.in<br>Room: AB3 301, Contact: 7617765062',
+                'Logical Reasoning': '<b>Jay Prakash Dixit</b> - jay_prakash_cs22@gla.ac.in<br>Room: AB3 202, Contact: 81551123865',
+                'Group Discussion': '<b>Dr. Anjali Mehra</b><br>Room: AB1 403, Contact: 76589865211',
+                'DAA': '<b>Armendra Singh</b> - Armendra_singh_cs22@gla.ac.in<br>Room: AB1 413, Contact: 87255665452',
+                'FullStack': '<b>Govind Jha</b> - govind_jha_cs22@gla.ac.in<br>Room: AB9 109, Contact: 8901234567'
+            };
+
+            const details = teacher[subject];
+            if (details) {
+                document.getElementById('teacherDetails').innerHTML = details;
+            } else {
+                document.getElementById('teacherDetails').innerHTML = 'No details found for this subject.';
+            }
+        }
+        const subject = getQueryParam('subject');
+        showTeacherDetails(subject);
+    </script>
+</body>
+</html>
