@@ -1,0 +1,114 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #d23d3d;
+    background-color: black;
+}
+
+.todo-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+} */
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+input {
+    padding: 12px;
+    width: 65%;
+    border: 2px solid black;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.button {
+    padding: 12px;
+    background-color: #17e151;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #74ebd5;
+}
+
+.delete-all {
+    margin-top: 20px;
+    background-color: #ff4b5f;
+}
+
+.delete-all:hover {
+    background-color: #ff6f6f;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #F9F9F9;
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.4s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+li.completed {
+    text-decoration: line-through;
+    background-color: #d4edda;
+}
+
+li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+li button {
+    background-color: #fa242c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #ff4b5f;
+}
