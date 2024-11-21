@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Timetable</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Timetable 3c CSE </h1>
+        <table class="timetable">
+            <thead>
+                <tr>
+                    <th>Hours</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8-9 AM</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td onclick="showTeacher('GROUP DISCUSSION')">Group Discussion</td>
+                    <td onclick="showTeacher('FULL_STACK')">Full Stack Development</td>
+                    <td onclick="showTeacher('QUANT AND APTITUDE')">Quant and Aptitude</td>
+                </tr>
+                <tr>
+                    <td>9-10 AM</td>
+                    <td onclick="showTeacher('THEORY OF AUTOMATA')">Theory of Automata</td>
+                    <td onclick="showTeacher('FULL_STACK')">Full Stack Development</td>
+                    <td onclick="showTeacher('MACHINE LEARNING LAB')">Machine Learning Lab</td>
+                    <td onclick="showTeacher('DATA STRUCTURES AND ALGORITHM')">Data Structures and Algorithm</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                </tr>
+                <tr>
+                    <td>10-11 AM</td>
+                    <td colspan="5" class="lunch">Lunch</td>
+                </tr>
+                <tr>
+                    <td>11-12 PM</td>
+                    <td onclick="showTeacher('GROUP DISCUSSION')">Group Discussion</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td onclick="showTeacher('THEORY OF AUTOMATA')">Theory of Automata</td>
+                    <td onclick="showTeacher('FULL_STACK')">Full Stack Development</td>
+                    <td onclick="showTeacher('MACHINE LEARNING LAB')">Machine Learning Lab</td>
+                </tr>
+                <tr>
+                    <td>12-1 PM</td>
+                    <td onclick="showTeacher('DATA STRUCTURES AND ALGORITHM')">Data Structures and Algorithm</td>
+                    <td onclick="showTeacher('QUANT AND APTITUDE')">Quant and Aptitude</td>
+                    <td onclick="showTeacher('AGILE SOFTWARE DEVELOPMENT')">Agile Software Development</td>
+                    <td onclick="showTeacher('MACHINE LEARNING')">Machine Learning</td>
+                    <td onclick="showTeacher('THEORY OF AUTOMATA')">Theory of Automata</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="teacher" class="modal">
+        <div class="content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="details"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
