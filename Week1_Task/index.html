@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Table</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Academic Time Table</h1>
+      <div class="table-container">
+        <table class="timetable">
+          <thead>
+            <tr>
+              <th>Hours</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thurs</th>
+              <th>Fri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>08:00 AM - 09:00 AM</th>
+              <td data-subject="Design And Analysis Of Algorithms">
+                Design And Analysis Of Algorithms
+              </td>
+              <td data-subject="Machine Learning Lab" rowspan="2">
+                Machine Learning Lab
+              </td>
+              <td data-subject="Design And Analysis Of Algorithms">
+                Design And Analysis Of Algorithms
+              </td>
+              <td data-subject="Machine Learning">Machine Learning</td>
+              <td data-subject="Machine Learning">Machine Learning</td>
+            </tr>
+            <tr>
+              <th>09:00 AM - 10:00 AM</th>
+              <td data-subject="Competitive Programming">
+                Competitive Programming
+              </td>
+              <td data-subject="Competitive Programming">
+                Competitive Programming
+              </td>
+              <td data-subject="Group Discussion & Personal interview">
+                Group Discussion & Personal interview
+              </td>
+              <td data-subject="Quant & Reasoning Aptitude">
+                Quant & Reasoning Aptitude
+              </td>
+            </tr>
+            <tr>
+              <th>10:00 AM - 11:00 AM</th>
+              <td data-subject="Logical Reasoning">Logical Reasoning</td>
+              <td data-subject="Machine Learning">Machine Learning</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td
+                data-subject="Design And Analysis Of Algorithms Lab"
+                rowspan="2"
+              >
+                Design And Analysis Of Algorithms Lab
+              </td>
+            </tr>
+            <tr>
+              <th>11:00 AM - 12:00 PM</th>
+              <td data-subject="Agile Software Development">
+                Agile Software Development
+              </td>
+              <td data-subject="Agile Software Development">
+                Agile Software Development
+              </td>
+              <td data-subject=".......">.......</td>
+              <td data-subject="Verbal Aptitude">Verbal Aptitude</td>
+            </tr>
+            <tr>
+              <th>12:00 PM - 01:00 PM</th>
+              <td colspan="5" class="lunch">Lunch Break</td>
+            </tr>
+            <tr>
+              <th>01:00 PM - 02:00 PM</th>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject="Design And Analysis Of Algorithms">
+                Design And Analysis Of Algorithms
+              </td>
+            </tr>
+            <tr>
+              <th>02:00 PM - 03:00 PM</th>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject="Agile Software Development">
+                Agile Software Development
+              </td>
+            </tr>
+            <tr>
+              <th>03:00 PM - 04:00 PM</th>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+            </tr>
+            <tr>
+              <th>04:00 PM - 05:00 PM</th>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject=".......">.......</td>
+              <td data-subject="Rashtra Gaurav">Rashtra Gaurav</td>
+              <td data-subject="Rashtra Gaurav">Rashtra Gaurav</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="subject-title"></h2>
+        <p id="teacher-details"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
