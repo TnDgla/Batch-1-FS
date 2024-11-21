@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+
+        h2 {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        #teacher-details {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn {
+            margin-top: 20px;
+        }
+    </style>
+    <title>Teacher Details</title>
+</head>
+<body>
+    <div class="container my-5">
+        <h2 id="subject-name"></h2>
+        <div id="teacher-details" class="mt-4">
+            <p id="teacher-name"></p>
+            <p id="teacher-email"></p>
+        </div>
+        <a href="index.html" class="btn btn-primary">Back to Timetable</a>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const subject = urlParams.get('subject');
+        const teacherData = {
+            science: { name: 'Mr. Sharma', email: 'sharma@school.com' },
+            maths: { name: 'Mrs. Gupta', email: 'gupta@school.com' },
+            hindi: { name: 'Mr. Patel', email: 'patel@school.com' },
+            english: { name: 'Ms. Khan', email: 'khan@school.com' },
+            social: { name: 'Mr. Roy', email: 'roy@school.com' },
+            arts: { name: 'Ms. Singh', email: 'singh@school.com' },
+            sports: { name: 'Mr. Verma', email: 'verma@school.com' },
+            project: { name: 'Mr. Kumar', email: 'kumar@school.com' }
+        };
+
+        document.getElementById('subject-name').textContent = subject.toUpperCase() + " Teacher Details";
+        const teacher = teacherData[subject.toLowerCase()];
+        if (teacher) {
+            document.getElementById('teacher-name').textContent = `Name: ${teacher.name}`;
+            document.getElementById('teacher-email').textContent = `Email: ${teacher.email}`;
+        }
+    </script>
+</body>
+</html>
