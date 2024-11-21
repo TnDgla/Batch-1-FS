@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.timetable {
+    margin: 0 auto;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+tbody td, thead th {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+}
+
+tbody td {
+    background-color: #f9f9f9;
+}
+
+tbody td a {
+    color: #333;
+    text-decoration: none;
+}
+
+tbody td a:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: blueviolet;
+}
+
+.btn-1{
+    background-color: aqua;
+    font-weight: bold;
+    margin-left: 20px;
+    
+}
+
+.btn-1 a{
+    text-decoration: none;
+}
+
+.teacher-details {
+    padding-left: 20px;
+}
+
+.lunch {
+    font-weight: bold;
+    color: chartreuse;
+}
+
+tr td a{
+    color: rgb(220, 20, 20);
+}
+
+.sub-1{
+    color: rgb(139, 0, 0);
+}
+
+.sub-2{
+    color: rgb(0, 139, 0);
+}
+
+.sub-3{
+    color: rgb(0, 125, 139);
+}
+
+.sub-4{
+    color: rgb(39, 0, 139);
+}
+
+.teacher-details {
+    margin: 0 auto;
+    width: 60%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teacher-details h2 {
+    color: #4CAF50;
+    font-size: 24px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.teacher-details p {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.teacher-details p span {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.back-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button a {
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #45a049;
+}
+
+/* For responsiveness */
+@media (max-width: 768px) {
+    .teacher-details {
+        width: 90%;
+    }
+}
