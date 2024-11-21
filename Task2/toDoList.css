@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+
+input {
+    padding: 0.5rem;
+    width: 20rem;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-btn {
+    border: 0.5px solid black;
+    background: linear-gradient(white, gray);
+    padding: 0.5rem 0rem;
+    width: 5rem;
+    font-size: large;
+    cursor: pointer;
+}
+
+#add-btn:hover {
+    background: linear-gradient(gray, white);
+}
+
+.task {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: large;
+
+}
