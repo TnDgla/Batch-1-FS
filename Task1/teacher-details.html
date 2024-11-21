@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="details">
+        <h2>Teacher Details</h2>
+        <div id="teacher-info"></div>
+        <button onclick="goBack()" class="goBack">Go Back</button>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        // Get the teacher details from the URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const teacher = params.get('teacher');
+
+        // Display the teacher details
+        const TeacherDetails = {
+            'DSA1': '<p class="subject"><b>Subject: </b>Data Structure Algorithm</p><p class="name"><b>Name: </b>Mr.Sanjay Madaan</p><p class="email"><b>Email: </b>sanjay_madaan3@gmail.com</p><p class="contact"><b>Contact: </b>88**********</p>',
+            'DAA': '<p class="subject"><b>Subject: </b>Design And Analysis of Algorithm</p><p class="name"><b>Name: </b>Mr. Amrendra Singh</p><p class="email"><b>Email: </b>amrendar68r@gmail.com</p><p class="contact"><b>Contact: </b>8800687908</p>',
+            'DAALab': '<p class="subject"><b>Subject: </b>Design And Analysis of Algorithm Lab</p><p class="name"><b>Name: </b>Mr. Amrendra Singh</p><p class="email"><b>Email: </b>amrendar68r@gmail.com</p><p class="contact"><b>Contact: </b>8800687908</p>',
+            'FS': '<p class="subject"><b>Subject: </b>Full Stack Using Scripting Technologies</p><p class="name"><b>Name: </b>Mr. Tushar Satija</p><p class="email"><b>Email: </b>tusharsatija737@gmail.com</p><p class="contact"><b>Contact: </b>8447702410</p>',
+            'FSLab': '<p class="subject"><b>Subject: </b>Full Stack Using Scripting Technologies Lab</p><p class="name"><b>Name: </b>Mr. Tushar Satija</p><p class="email"><b>Email: </b>tusharsatija737@gmail.com</p><p class="contact"><b>Contact: </b>8447702410</p>',
+            'DM': '<p class="subject"><b>Subject: </b>Fundamental Of Data Mining and Predictive Modelling</p><p class="name"><b>Name: </b>Dr. Brajesh Kumar Shukla</p><p class="email"><b>Email: </b>brajesh.shukla@gla.ac.in</p><p class="contact"><b>Contact: </b>8290994353</p>',
+            'DMLab': '<p class="subject"><b>Subject: </b>Fundamental Of Data Mining and Predictive Modelling Lab</p><p class="name"><b>Name: </b>Dr. Brajesh Kumar Shukla</p><p class="email"><b>Email: </b>brajesh.shukla@gla.ac.in</p><p class="contact"><b>Contact: </b>8290994353</p>',
+            'NLP': '<p class="subject"><b>Subject: </b>Computational Linguistics and Natural Language Processing</p><p class="name"><b>Name: </b>Mr. Ankur Mishra</p><p class="email"><b>Email: </b>ankur.mishra@gla.ac.in</p><p class="contact"><b>Contact: </b>9256497472</p>',
+            'NLPLab': '<p class="subject"><b>Subject: </b>Computational Linguistics and Natural Language Processing Lab</p><p class="name"><b>Name: </b>Mr. Ankur Mishra</p><p class="email"><b>Email: </b>ankur.mishra@gla.ac.in</p><p class="contact"><b>Contact: </b>9256497472</p>',
+            'CP': '<p class="subject"><b>Subject: </b>Competitive Programming</p><p class="name"><b>Name: </b>Mr. Suresh Pratap Singh</p><p class="email"><b>Email: </b>directortnd@gla.ac.in</p><p class="contact"><b>Contact: </b>9559961616</p>',
+            'QRA': '<p class="subject"><b>Subject: </b>Quantitative and Reasoning Aptitude</p><p class="name"><b>Name: </b>Mr. Jai Prakash Garg</p><p class="email"><b>Email: </b>jay.garg@gla.ac.in</p><p class="contact"><b>Contact: </b>9897097010</p>',
+            'LR': '<p class="subject"><b>Subject: </b>Logical Reasoning</p><p class="name"><b>Name: </b>Mr. Jai Prakash Garg</p><p class="email"><b>Email: </b>jay.garg@gla.ac.in</p><p class="contact"><b>Contact: </b>9897097010</p>',
+            'VA': '<p class="subject"><b>Subject: </b>Verbal Aptitude</p><p class="name"><b>Name: </b>Mr. Quazi Ziauddin</p><p class="email"><b>Email: </b>ziauddin.quazi@gla.ac.in</p><p class="contact"><b>Contact: </b>8585929589</p>',
+            'GDPI': '<p class="subject"><b>Subject: </b>Group Discussion and Personal Interview</p><p class="name"><b>Name: </b>Mrs. Anjali Mehra</p><p class="email"><b>Email: </b>anjali.mehra@gla.ac.in</p><p class="contact"><b>Contact: </b>7800160011</p>',
+            'RG': '<p class="subject"><b>Subject: </b>Rashtra Gaurav</p><p class="name"><b>Name: </b>Dr. Preeti Verma</p><p class="email"><b>Email: </b>preeti.verma@gla.ac.in</p><p class="contact"><b>Contact: </b>**********</p>',
+            'WEBD1': '<p class="subject"><b>Subject: </b>Full Stack Track</p><p class="name"><b>Name: </b>Mr.Akash Kumar Choudhary</p><p class="email"><b>Email: </b>akashchoudhary01@gmail.com</p><p class="contact"><b>Contact: </b>92********</p>',
+            'DSA2': '<p class="subject"><b>Subject: </b>Data Structure Algorithm</p><p class="name"><b>Name: </b>Mohd. Aamir Khan</p><p class="email"><b>Email: </b>aamir43@gmail.com</p><p class="contact"><b>Contact: </b>78**********</p>',
+            'WEBD2': '<p class="subject"><b>Subject: </b>Full Stack Track</p><p class="name"><b>Name: </b>Mr.Govind Kumar Jha</p><p class="email"><b>Email: </b>govind_jha43@gmail.com</p><p class="contact"><b>Contact: </b>68**********</p>',
+
+        };
+
+        // Display the corresponding teacher info
+        document.getElementById('teacher-info').innerHTML = TeacherDetails[teacher] || 'No details available.';
+    </script>
+</body>
+</html>
