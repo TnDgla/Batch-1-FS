@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.task-item input {
+    margin-right: 10px;
+}
+button {
+    margin-left: 10px;
+}
