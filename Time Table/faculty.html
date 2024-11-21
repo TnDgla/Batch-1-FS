@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .heading{
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+                font-size: 50px;
+            }
+            .container{
+                height: 100px;
+                display: grid;
+                grid-template-columns: repeat(3,400px);
+                grid-template-rows: repeat(3,100px);
+                gap: 50px;
+                margin: 50px;
+            }
+            .container>div{
+                border-radius: 20px;
+                border: 2px solid black;
+                background-color: rgb(58, 168, 52);
+                display: flex;
+                padding: 5px;
+                flex-direction: column;
+                justify-content: center;
+                color: white;
+            }
+            h5{
+                font-size: 25px;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: 400;
+                margin-bottom: 5px;
+            }
+            p{
+                font-size: 17.5px;
+            }
+        </style> 
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <div class="heading"><h1>Faculty Information</h1></div>
+        <div class="container">
+            <div>
+                <h5 id="faculty-0"></h5>
+                <p id="mail-0"></p>
+                <p id="contact-0"></p>
+            </div>
+            <div>
+                <h5 id="faculty-1"></h5>
+                <p id="mail-1"></p>
+                <p id="contact-1"></p>
+            </div>
+            <div>
+                <h5 id="faculty-2"></h5>
+                <p id="mail-2"></p>
+                <p id="contact-2"></p>
+            </div>
+            <div>
+                <h5 id="faculty-3"></h5>
+                <p id="mail-3"></p>
+                <p id="contact-3"></p>
+            </div>
+            <div>
+                <h5 id="faculty-4"></h5>
+                <p id="mail-4"></p>
+                <p id="contact-4"></p>
+            </div>
+            <div>
+                <h5 id="faculty-5"></h5>
+                <p id="mail-5"></p>
+                <p id="contact-5"></p>
+            </div>
+            <div>
+                <h5 id="faculty-6"></h5>
+                <p id="mail-6"></p>
+                <p id="contact-6"></p>
+            </div>
+            <div>
+                <h5 id="faculty-7"></h5>
+                <p id="mail-7"></p>
+                <p id="contact-7"></p>
+            </div>
+            <div>
+                <h5 id="faculty-8"></h5>
+                <p id="mail-8"></p>
+                <p id="contact-8"></p>
+            </div>
+            
+        </div>
+    </body>
+</html>
