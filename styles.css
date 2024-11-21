@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.timetable th, .timetable td {
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.subject {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.subject:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
